@@ -7,13 +7,26 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Java Projects :: Aggregator</name>
-    
-    <description>
-		Java Projects aggregator.
+
+     <description>
+		Example Projects parent.
     </description>
  
-	<modules>
-		 <module>maven</module>
-  </modules>
+    <modules>
+      <module>maven</module>
+    </modules>
 
+    <organization>
+        <name>gtsntzs</name>
+        <url>https://github.com/gtsntzs</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>gtsntzs</id>
+            <name>Georgios Tsontzos</name>
+            <url>https://github.com/gtsntzs</url>
+        </developer>
+    </developers>
+	
 </project>

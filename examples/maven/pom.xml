@@ -9,11 +9,11 @@
     <name>Maven :: Parent</name>
     
     <description>
-		Maven parent module.
+		Example Projects parent.
     </description>
- 
+
 	<modules>
 		 <module>archetypes</module>
-  </modules>
-
+    </modules>
+    
 </project>
