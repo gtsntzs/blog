@@ -11,7 +11,7 @@
   <version>1.0.0</version>
   <packaging>pom</packaging>
   <!-- project info -->
-  <name>Maven :: Parent</name>
+  <name>Maven :: Aggregator</name>
   <description>
     Example Projects parent.
   </description>

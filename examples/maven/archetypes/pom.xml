@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
-     <parent>
-		<groupId>soa.gtsntzs</groupId>
-		<artifactId>maven</artifactId>
-		<version>1.0.0</version>
+    <parent>
+      <groupId>soa.gtsntzs</groupId>
+      <artifactId>maven</artifactId>
+      <version>1.0.0</version>
     </parent>
-    
     <groupId>soa.gtsntzs</groupId>
     <artifactId>archetypes</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Archetypes :: Parent</name>
-    
-    <url>${site.url}/maven/archetypes</url>
-    
     <description>
 		The parent module for the archetype projects.
     </description>
- 
+    <url>${site.url}/maven/archetypes</url>
+      <!-- -->
 	<modules>
 		 <module>simple-archetype</module>
-  </modules>
-
+    </modules>
+  <!-- project info -->
+  <inceptionYear>2014</inceptionYear>
+  <organization>
+    <name>gtsntzs</name>
+    <url>https://github.com/gtsntzs</url>
+  </organization>
+  <developers>
+    <developer>
+      <id>gtsntzs</id>
+      <name>Georgios Tsontzos</name>
+      <url>https://github.com/gtsntzs</url>
+    </developer>
+  </developers>
+  <properties>
+    <!-- project properties -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <!-- Dependency versioning properties -->
+    <spring.version>3.2.8.RELEASE</spring.version>
+    <camel.version>2.12.0</camel.version>
+    <log4j.version>1.2.17</log4j.version>
+    <slf4j.version>1.7.6</slf4j.version>
+    <mockito.version>1.9.5</mockito.version>
+    <testng.version>6.8.8</testng.version>
+  </properties>
 </project>

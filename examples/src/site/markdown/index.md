@@ -1,6 +1,4 @@
 
-# Under Construction
-
 ## In Brief
 
 This is a collection of examples using modern frameworks mainly in Java language.
@@ -25,77 +23,24 @@ and persistence providers :
 
 --- 
 
+## Prerequisite
 
-## Usage
+In order to use the examples you need to have maven 3.2.1 and above, the git version control system and java 1.7 or greater.
 
-In order to use the examples you need to have maven 3.2.1 and above, git and java 1.7 or greater.
-
-### Documentation
-
-Every project has its own documentation site. 
-
-### Maven Project Structure
+## Maven Project Structure
 
 The project structure is organised in a way to make life easier, but first lets put some terminology through. When a project ends with "Aggregator" implies that it 's none of the other sub-projects are dependent on it. If it contains "Parent" it manages all dependencies and plugins of the sub-projects. When contain none of the above terms its a project Example
 
 In order to use an example it has to be packaged by packaging its Parent project.
 
+## Documentation
+
+Every project has its own documentation site. Every Aggregator module summarizes the purpose with some general ideas of the ones to follow. In every Parent module will be reports on dependency management, licence info, plugin management... and a small summary of the child examples. Lastly every example module will have reports on every aspect of its nature and a detailed blog entry providing necessary explanations when needed.
+
+## In Action
+Description of how to run build the examples.
+
 ---
-
-## Configuration
-
-The skin is configurable using the `<custom>` element in your `site.xml` file. The available
-options are [described in the documentation][doc]. A sample configuration file is below:
-
-[doc]: config.html
-
-```xml
-<project>
-  ...
-  <custom>
-    <reflowSkin>
-      <theme>bootswatch-spacelab</theme>
-      <highlightJs>true</highlightJs>
-      <brand>
-        <name>My Project</name>
-        <href>http://github.com/andriusvelykis/reflow-maven-skin</href>
-      </brand>
-      <slogan>Super interesting project doing good things.</slogan>
-      <titleTemplate>%2$s | %1$s</titleTemplate>
-      <toc>top</toc>
-      <topNav>Download|reports</topNav>
-      <bottomNav>
-        <column>Main|Download</column>
-        <column>Documentation</column>
-        <column>reports|modules</column>
-      </bottomNav>
-      <bottomDescription>
-        This is a very good project doing interesting and valuable things.
-      </bottomDescription>
-      <pages>
-        <index project="project-id">
-          <shortTitle>Welcome</shortTitle>
-          <breadcrumbs>false</breadcrumbs>
-          <toc>false</toc>
-          <sections>
-            <carousel />
-            <body />
-            <sidebar />
-            <thumbs>2</thumbs>
-            <columns>3</columns>
-          </sections>
-        </index>
-        <developer-info>
-          <toc>sidebar</toc>
-        </developer-info>
-      </pages>
-    </reflowSkin>
-  </custom>
-  ...
-</project>
-```
---- 
-
 
 ## Learn by example
 
@@ -106,3 +51,16 @@ Look for the site configuration and web page sources in `/src/site` of each modu
 and for plug-in configuration in respective POM files.
 
 [reflow-src]: http://github.com/andriusvelykis/reflow-maven-skin "Reflow Maven skin source code"
+
+## Acknowledgement
+
+Some tools made this place to exist:
+
+* Linux
+* Java
+* Apache
+* Jboss
+* Spring IO
+* git
+* stackedit.io for the markdown editing
+* and github of course.
