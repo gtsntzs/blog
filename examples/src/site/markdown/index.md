@@ -1,3 +1,6 @@
+
+# Under Construction
+
 ## In Brief
 
 This is a collection of examples using modern frameworks mainly in Java language.
@@ -25,48 +28,19 @@ and persistence providers :
 
 ## Usage
 
-Add [`reflow-velocity-tools`][reflow-tools] dependency to `maven-site-plugin` in the POM file:
+In order to use the examples you need to have maven 3.2.1 and above, git and java 1.7 or greater.
 
-[reflow-tools]: ../reflow-velocity-tools
+### Documentation
 
-```xml
-<build>
-  <plugins>
-    ...
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-site-plugin</artifactId>
-      <version>3.3</version>
-      <dependencies>
-        ...
-        <dependency>
-          <groupId>lt.velykis.maven.skins</groupId>
-          <artifactId>reflow-velocity-tools</artifactId>
-          <version>1.1.1</version>
-        </dependency>
-        <!-- Reflow skin requires Velocity >= 1.7  -->
-        <dependency>
-          <groupId>org.apache.velocity</groupId>
-          <artifactId>velocity</artifactId>
-          <version>1.7</version>
-        </dependency>
-        ...
-      </dependencies>
-      ...
-    </plugin>
-    ...
-  </plugins>
-</build>
-```
+Every project has its own documentation site. 
 
-Reflow Velocity tools ([`reflow-velocity-tools`][reflow-tools]) are required by the Reflow skin
-to read skin configuration and provides other functionality. The library must be available when
-generating Maven site.
+### Maven Project Structure
 
-Note that _Velocity 1.7_ is also required by the template.
+The project structure is organised in a way to make life easier, but first lets put some terminology through. When a project ends with "Aggregator" implies that it 's none of the other sub-projects are dependent on it. If it contains "Parent" it manages all dependencies and plugins of the sub-projects. When contain none of the above terms its a project Example
+
+In order to use an example it has to be packaged by packaging its Parent project.
 
 ---
-
 
 ## Configuration
 
