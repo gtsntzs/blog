@@ -16,7 +16,7 @@
   <!-- packaging is maven-archetype! -->
   <packaging>maven-archetype</packaging>
   
-  <url>http://gtsntzs.github</url>
+  <url>${site.url}/maven/archetypes/simple-archetype</url>
   <name>Simple :: Archetype</name>
     
   <description>
