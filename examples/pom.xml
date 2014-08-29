@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  
   <groupId>soa.gtsntzs</groupId>
   <artifactId>examples</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>Examples :: Parent :: Aggregator</name>
+  <name>Examples :: Aggregator</name>
   <description>
-    Example Projects parent.
+    Example Projects Aggregator.
   </description>
   <url>${site.url}</url>
   <!-- -->
@@ -32,11 +33,14 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <encoding>UTF-8</encoding>
-    <site.url>http:/localhost:9090</site.url>
-    <site.port>9000</site.port>
+    <github.global.server>github</github.global.server>
     <site.deploy.id>gh-pages</site.deploy.id>
-    <site.deploy.url>file:///media/Work/online/deploy </site.deploy.url>
-    <site.github.issues.url>http://github.com/gtsntzs/example/issues</site.github.issues.url>
+    <site.url>http://gtsntzs.github.io/blog</site.url>
+    <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
+    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
+    <repositoryName>blog</repositoryName>
+    <repositoryOwner>gtsntzs</repositoryOwner>
+    <!-- <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url> -->
     <!-- maven report plugins -->
     <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
     <maven.cobertura.plugin>2.5.1</maven.cobertura.plugin>
@@ -64,6 +68,12 @@
       <url>${site.deploy.url}</url>
     </site>
   </distributionManagement>
+  <scm>
+    <connection>scm:git:git@github.com:gtsntzs/blog.git</connection>
+    <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
+    <url>http://github.com/gtsntzs/blog/tree/master</url>
+    <tag>HEAD</tag>
+  </scm>
   <issueManagement>
     <system>GitHub</system>
     <url>${site.github.issues.url}</url>
@@ -91,13 +101,12 @@
         </dependencies>
         <configuration>
           <attach>true</attach>
-          <port>${site.port}</port>
           <generateReports>true</generateReports>
           <inputEncoding>${encoding}</inputEncoding>
           <outputEncoding>${encoding}</outputEncoding>
           <siteDirectory>${project.basedir}/src/site</siteDirectory>
           <!-- Site deployment done using GitHub site plugin -->
-          <skipDeploy>false</skipDeploy>
+          <skipDeploy>true</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
             <plugin>
@@ -135,6 +144,36 @@
           </reportPlugins>
         </configuration>
       </plugin>
+      <plugin>
+        <!-- GitHub site plug-in for deployment to GitHub pages -->
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.9</version>
+		<executions>
+        <execution>
+            <goals>
+                <goal>site</goal>
+            </goals>
+            <!-- select the Maven phase in which the plugin will be executed -->
+            <phase>site-deploy</phase>
+            <configuration>
+				<repositoryName>blog</repositoryName>
+                <repositoryOwner>gtsntzs</repositoryOwner>
+                <userName>gtsntzs</userName>
+                <!-- Plugin configuration ges here -->
+                <server>github</server>
+                <!-- The commit message -->
+                <message>Building site for my project</message>
+                <!-- The location where the site is uploaded -->
+                <path>${project.artifactId}</path>
+                <!-- Use merge or override the content -->
+                <github.site.dryRun>true</github.site.dryRun>
+                <merge>true</merge>
+            </configuration>
+        </execution>
+    </executions>
+      </plugin>
+
     </plugins>
     <!-- -->
     <pluginManagement>

@@ -37,11 +37,29 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- Dependency versioning properties -->
-    <spring.version>3.2.8.RELEASE</spring.version>
-    <camel.version>2.12.0</camel.version>
-    <log4j.version>1.2.17</log4j.version>
-    <slf4j.version>1.7.6</slf4j.version>
-    <mockito.version>1.9.5</mockito.version>
-    <testng.version>6.8.8</testng.version>
+    <archetype.packaging.version>2.2</archetype.packaging.version>
+    <maven.archetype.plugin.version>2.2</maven.archetype.plugin.version>
   </properties>
+  
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>${archetype.packaging.version}</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>${maven.archetype.plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+ 
+  
 </project>
