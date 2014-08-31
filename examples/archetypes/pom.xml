@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>soa.gtsntzs</groupId>
 		<artifactId>examples</artifactId>
-		<version>${project.version}</version>
+		<version>0.1-SNAPSHOT</version>
 	</parent>
 
     <groupId>soa.gtsntzs</groupId>
     <artifactId>archetypes</artifactId>
-    <version>${project.version}</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Archetypes :: Parent</name>
     <description>
