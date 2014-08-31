@@ -4,7 +4,7 @@
   
   <groupId>soa.gtsntzs</groupId>
   <artifactId>examples</artifactId>
-  <version>1.0.0</version>
+  <version>${project.version}</version>
   <packaging>pom</packaging>
   <name>Examples :: Aggregator</name>
   <description>
@@ -13,7 +13,7 @@
   <url>${site.url}</url>
   <!-- -->
   <modules>
-    <module>maven</module>
+    <module>archetypes</module>
   </modules>
   <!-- project info -->
   <inceptionYear>2014</inceptionYear>
@@ -37,10 +37,11 @@
     <site.deploy.id>gh-pages</site.deploy.id>
     <site.url>http://gtsntzs.github.io/blog</site.url>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
+    <!--
+    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> -->
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <!-- <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url> -->
+    <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
     <!-- maven report plugins -->
     <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
     <maven.cobertura.plugin>2.5.1</maven.cobertura.plugin>
@@ -57,6 +58,7 @@
     <maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
     <!-- Dependency versioning properties -->
     <java.version>1.7</java.version>
+    <project.version>0.1-SNAPSHOT</project.version>
     <velocity.version>1.7</velocity.version>
     <reflow.velocity.tools.version>1.1.1</reflow.velocity.tools.version>
   </properties>
@@ -106,7 +108,7 @@
           <outputEncoding>${encoding}</outputEncoding>
           <siteDirectory>${project.basedir}/src/site</siteDirectory>
           <!-- Site deployment done using GitHub site plugin -->
-          <skipDeploy>true</skipDeploy>
+          <skipDeploy>false</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
             <plugin>
@@ -144,8 +146,8 @@
           </reportPlugins>
         </configuration>
       </plugin>
+      <!--
       <plugin>
-        <!-- GitHub site plug-in for deployment to GitHub pages -->
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>0.9</version>
@@ -154,26 +156,21 @@
             <goals>
                 <goal>site</goal>
             </goals>
-            <!-- select the Maven phase in which the plugin will be executed -->
             <phase>site-deploy</phase>
             <configuration>
 				<repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
                 <userName>gtsntzs</userName>
-                <!-- Plugin configuration ges here -->
                 <server>github</server>
-                <!-- The commit message -->
                 <message>Building site for my project</message>
-                <!-- The location where the site is uploaded -->
                 <path>${project.artifactId}</path>
-                <!-- Use merge or override the content -->
                 <github.site.dryRun>true</github.site.dryRun>
                 <merge>true</merge>
             </configuration>
         </execution>
-    </executions>
+		</executions>
       </plugin>
-
+	-->
     </plugins>
     <!-- -->
     <pluginManagement>

@@ -42,7 +42,6 @@
       <!-- Split menus in the bottom navigation -->
       <bottomNav maxSpan="9">
         <column>Download|Contribute</column>
-        <column>Aggregators</column>
         <column>Parents</column>
         <column>reports</column>
       </bottomNav>
@@ -105,11 +104,8 @@
       <item name="Java Examples" href="/"/>
     </breadcrumbs>
 
-    <menu name="Aggregators" inherit="bottom">
-      <item name="Maven" href="maven/index.html"/>
-    </menu>
     <menu name="Parents" inherit="bottom">
-      <item name="Archetypes::Parent" href="maven/archetypes/index.html"/>
+      <item name="Archetypes::Parent" href="archetypes/index.html"/>
     </menu>
     <links>
       <item name="Download" href="https://github.com/gtsntzs/blog/master.zip"/>
