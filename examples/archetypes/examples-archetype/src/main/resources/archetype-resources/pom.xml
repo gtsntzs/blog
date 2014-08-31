@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-							 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0          http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <packaging>jar</packaging>
   <version>${version}</version>
-
   <name>Simple Archetype :: Project</name>
   <url>http://www.domain.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-	<!-- dependencies properties -->
+    <!-- dependencies properties -->
     <slf4j.version>${slf4j-version}</slf4j.version>
     <log4j.version>${log4j-version}</log4j.version>
     <junit.version>${junit-version}</junit.version>
     <!-- plugins properties -->
-	<source.version>${source-version}</source.version>
+    <source.version>${source-version}</source.version>
     <maven.compiler.plugin.version>${maven-compiler-plugin-version}</maven.compiler.plugin.version>
     <maven.resources.plugin.version>${maven-resources-plugin-version}</maven.resources.plugin.version>
   </properties>
-
   <dependencies>
     <!-- logging -->
     <dependency>
@@ -51,19 +41,16 @@
       <artifactId>log4j</artifactId>
       <version>${log4j.version}</version>
     </dependency>
-
     <!-- testing -->
     <dependency>
-	  <groupId>junit</groupId>
-	  <artifactId>junit</artifactId>
- 	  <version>${junit.version}</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <defaultGoal>install</defaultGoal>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -84,5 +71,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
