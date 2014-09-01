@@ -11,7 +11,7 @@
   </parent>
 
   <groupId>soa.gtsntzs.archetypes</groupId>
-  <artifactId>simple-archetype</artifactId>
+  <artifactId>module-archetype</artifactId>
   <version>0.3-SNAPSHOT</version>
   <!-- packaging is maven-archetype! -->
   <packaging>maven-archetype</packaging>
