@@ -4,11 +4,11 @@
   <parent>
     <groupId>soa.gtsntzs</groupId>
     <artifactId>examples</artifactId>
-    <version>0.3</version>
+    <version>0.3-SNAPSHOT</version>
   </parent>
   <groupId>soa.gtsntzs</groupId>
   <artifactId>archetypes</artifactId>
-  <version>0.3</version>
+  <version>0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Archetypes :: Parent</name>
   <description>
