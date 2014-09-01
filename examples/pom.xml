@@ -110,7 +110,7 @@
           <outputEncoding>${encoding}</outputEncoding>
           <siteDirectory>${project.basedir}/src/site</siteDirectory>
           <!-- Site deployment done using GitHub site plugin -->
-          <skipDeploy>false</skipDeploy>
+          <skipDeploy>true</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
             <plugin>
@@ -165,8 +165,8 @@
                 <userName>gtsntzs</userName>
                 <server>github</server>
                 <message>Building site for my project</message>
-                <path>${project.artifactId}</path>
-                <github.site.dryRun>true</github.site.dryRun>
+                <path>${project.distributionManagement.site.url}</path>
+                <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
                 <merge>true</merge>
             </configuration>
         </execution>
