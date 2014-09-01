@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-	<parent>
-		<groupId>soa.gtsntzs</groupId>
-		<artifactId>examples</artifactId>
-		<version>0.1-SNAPSHOT</version>
-	</parent>
-
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
     <groupId>soa.gtsntzs</groupId>
-    <artifactId>archetypes</artifactId>
+    <artifactId>examples</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>Archetypes :: Parent</name>
-    <description>
+  </parent>
+  <groupId>soa.gtsntzs</groupId>
+  <artifactId>archetypes</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Archetypes :: Parent</name>
+  <description>
 		The parent module for the archetype projects.
     </description>
-    <!-- -->
-	<modules>
-		 <module>simple-archetype</module>
-    </modules>
-
+  <!-- -->
+  <modules>
+    <module>simple-archetype</module>
+    <module>multi-module-archetype</module>
+  </modules>
   <properties>
     <!-- project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,7 +27,6 @@
     <archetype.packaging.version>2.2</archetype.packaging.version>
     <maven.archetype.plugin.version>2.2</maven.archetype.plugin.version>
   </properties>
-  
   <build>
     <extensions>
       <extension>
@@ -38,7 +35,6 @@
         <version>${archetype.packaging.version}</version>
       </extension>
     </extensions>
-
     <pluginManagement>
       <plugins>
         <plugin>
@@ -49,6 +45,4 @@
       </plugins>
     </pluginManagement>
   </build>
- 
-  
 </project>

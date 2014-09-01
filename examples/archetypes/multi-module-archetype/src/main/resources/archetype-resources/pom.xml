@@ -3,52 +3,60 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
-  <packaging>jar</packaging>
   <version>${version}</version>
-  <name>Simple Archetype :: Project</name>
-  <url>http://www.domain.org</url>
+  <packaging>pom</packaging>
+  <name> ${artifactId} :: Parent</name>
+  <description>
+	Add a description for the project.
+  </description>
+  <modules>
+    <module>${artifactId}-example</module>
+  </modules>
   <properties>
+    <!-- project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <source.version>${java-version}</source.version>
     <!-- dependencies properties -->
     <slf4j.version>${slf4j-version}</slf4j.version>
     <log4j.version>${log4j-version}</log4j.version>
     <junit.version>${junit-version}</junit.version>
     <!-- plugins properties -->
-    <source.version>${source-version}</source.version>
     <maven.compiler.plugin.version>${maven-compiler-plugin-version}</maven.compiler.plugin.version>
     <maven.resources.plugin.version>${maven-resources-plugin-version}</maven.resources.plugin.version>
   </properties>
-  <dependencies>
-    <!-- logging -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>${slf4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>jcl-over-slf4j</artifactId>
-      <version>${slf4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
-    <!-- testing -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <!-- logging -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+      <!-- testing -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
