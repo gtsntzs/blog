@@ -16,10 +16,10 @@
   <!-- packaging is maven-archetype! -->
   <packaging>maven-archetype</packaging>
   
-  <name>Simple :: Archetype</name>
+  <name>Module :: Archetype</name>
     
   <description>
-		Simple Archetype Example.
+		Module Archetype creates projects prepared for the multimodule generated project.
   </description>
  
  <build>

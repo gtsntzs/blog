@@ -18,7 +18,8 @@
   <modules>
     <module>simple-archetype</module>
     <module>multi-module-archetype</module>
-  </modules>
+    <module>module-archetype</module>
+   </modules>
   <properties>
     <!-- project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

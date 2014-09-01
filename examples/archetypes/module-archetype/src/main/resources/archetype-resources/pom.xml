@@ -12,51 +12,31 @@
   <packaging>jar</packaging>
   <version>${version}</version>
 
-  <name>Simple Archetype :: Project</name>
-  <url>http://www.domain.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-	<!-- dependencies properties -->
-    <slf4j.version>${slf4j-version}</slf4j.version>
-    <log4j.version>${log4j-version}</log4j.version>
-    <junit.version>${junit-version}</junit.version>
-    <!-- plugins properties -->
-	<source.version>${source-version}</source.version>
-    <maven.compiler.plugin.version>${maven-compiler-plugin-version}</maven.compiler.plugin.version>
-    <maven.resources.plugin.version>${maven-resources-plugin-version}</maven.resources.plugin.version>
-  </properties>
+  <name>${artifactId} :: Example</name>
 
   <dependencies>
     <!-- logging -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>${slf4j.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
-      <version>${slf4j.version}</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
     </dependency>
 
     <!-- testing -->
     <dependency>
 	  <groupId>junit</groupId>
 	  <artifactId>junit</artifactId>
- 	  <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -68,7 +48,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.plugin.version}</version>
         <configuration>
           <source>${source.version}</source>
           <target>${source.version}</target>
@@ -77,7 +56,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>${maven.resources.plugin.version}</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
