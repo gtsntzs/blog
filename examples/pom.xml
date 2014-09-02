@@ -40,9 +40,10 @@
         
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url />
-    <!--
     <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
+    <!--
+    
+    <site.deploy.url />
     <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
     -->
     <!-- maven report plugins -->
@@ -74,10 +75,9 @@
     </site>
   </distributionManagement>
   <scm>
-    <connection>scm:git:git@github.com:gtsntzs/blog.git</connection>
     <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
+    <connection>scm:git:git://github.com:gtsntzs/blog.git</connection>
     <url>http://github.com/gtsntzs/blog/tree/master</url>
-    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>GitHub</system>
@@ -161,17 +161,19 @@
             </goals>
             <phase>site-deploy</phase>
             <configuration>
-				<!--
 				<repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
-                <userName>gtsntzs</userName>
+                
+				<!--
+				<userName>gtsntzs</userName>
                 <server>github</server>
+				<merge>true</merge>
                 -->
                 <message>Building site for my project</message>
                 <path>${project.distributionManagement.site.url}</path>
                 <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
                 <dryRun>true</dryRun>
-                <merge>true</merge>
+                
             </configuration>
         </execution>
 		</executions>
@@ -182,7 +184,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.4.2</version>
         <configuration>
-          <pushChanges>false</pushChanges>
+          <pushChanges>true</pushChanges>
           <localCheckout>true</localCheckout>
         </configuration>
          <dependencies>
