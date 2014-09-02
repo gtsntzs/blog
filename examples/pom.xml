@@ -40,8 +40,9 @@
         
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
+    <site.deploy.url />
     <!--
+    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
     <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
     -->
     <!-- maven report plugins -->
@@ -160,13 +161,16 @@
             </goals>
             <phase>site-deploy</phase>
             <configuration>
+				<!--
 				<repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
                 <userName>gtsntzs</userName>
                 <server>github</server>
+                -->
                 <message>Building site for my project</message>
                 <path>${project.distributionManagement.site.url}</path>
                 <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+                <dryRun>true</dryRun>
                 <merge>true</merge>
             </configuration>
         </execution>
