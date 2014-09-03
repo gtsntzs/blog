@@ -6,7 +6,7 @@
 				<span class="color-highlight">Modern Java Examples</span>
 			]]>
 	</name>
-  <href>http://localhost:9000/</href>
+  <href>http://gtsntzs.github.io/blog/</href>
   </bannerLeft>
   
   <publishDate position="bottom" format="yyyy-MM-dd"/>
@@ -30,7 +30,7 @@
       <brand>
         <!-- Brand text in top-left part of the site -->
         <name><![CDATA[<span class="color-highlight">Java Examples</span> Project]]></name>
-        <href>http://localhost:9000/</href>
+        <href>http://gtsntzs.github.io/blog/</href>
       </brand>
       <slogan>Modern Java</slogan>
       <titleTemplate>%2$s | %1$s</titleTemplate>

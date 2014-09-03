@@ -37,13 +37,13 @@
     <github.global.server>github</github.global.server>
     <site.deploy.id>gh-pages</site.deploy.id>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-    <site.url>https://gtsntzs.github.io/blog</site.url>
+    <site.url>https://gtsntzs.github.io/blog/</site.url>
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
+	<site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
     <!--
     <site.deploy.url />
-    <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
+    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
     -->
     <!-- maven report plugins -->
     <maven.site.plugin>3.3</maven.site.plugin>
@@ -110,7 +110,7 @@
           <outputEncoding>${encoding}</outputEncoding>
           <siteDirectory>${project.basedir}/src/site</siteDirectory>
           <!-- Site deployment done using GitHub site plugin -->
-          <skipDeploy>true</skipDeploy>
+          <skipDeploy>false</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
             <plugin>
@@ -148,7 +148,7 @@
           </reportPlugins>
         </configuration>
       </plugin>
-      <!-- -->
+      <!-- 
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
@@ -171,6 +171,7 @@
         </execution>
 		</executions>
       </plugin>
+      -->
 	<!-- -->
 	  <plugin>
         <groupId>org.apache.maven.plugins</groupId>
