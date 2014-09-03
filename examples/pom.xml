@@ -33,20 +33,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <encoding>UTF-8</encoding>
+	<!-- project site properties -->
     <github.global.server>github</github.global.server>
     <site.deploy.id>gh-pages</site.deploy.id>
-    <site.url>http://gtsntzs.github.io/blog</site.url>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-        
+    <site.url>https://gtsntzs.github.io/blog</site.url>
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
+    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
     <!--
-    
     <site.deploy.url />
     <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
     -->
     <!-- maven report plugins -->
+    <maven.site.plugin>3.3</maven.site.plugin>
     <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
     <maven.cobertura.plugin>2.5.1</maven.cobertura.plugin>
     <maven.doxia.module.markdown.version>1.3</maven.doxia.module.markdown.version>
@@ -54,7 +54,6 @@
     <maven.jxr.plugin>2.3</maven.jxr.plugin>
     <maven.pmd.plugin>2.7.1</maven.pmd.plugin>
     <maven.project.info.reports.plugin>2.6</maven.project.info.reports.plugin>
-    <maven.site.plugin>3.3</maven.site.plugin>
     <maven.sonar.plugin>3.3.1</maven.sonar.plugin>
     <maven.surefire.plugin>2.12.4</maven.surefire.plugin>
     <maven.taglist.plugin>2.4</maven.taglist.plugin>
@@ -76,8 +75,8 @@
   </distributionManagement>
   <scm>
     <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
-    <connection>scm:git:git://github.com:gtsntzs/blog.git</connection>
-    <url>http://github.com/gtsntzs/blog/tree/master</url>
+    <connection>scm:git:git@github.com:gtsntzs/blog.git</connection>
+    <url>https://github.com/gtsntzs/blog/tree/master</url>
   </scm>
   <issueManagement>
     <system>GitHub</system>
@@ -156,25 +155,19 @@
         <version>${github.site.maven.plugin.version}</version>
 		<executions>
         <execution>
-            <goals>
-                <goal>site</goal>
-            </goals>
-            <phase>site-deploy</phase>
             <configuration>
 				<repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
-                
-				<!--
-				<userName>gtsntzs</userName>
-                <server>github</server>
-				<merge>true</merge>
-                -->
                 <message>Building site for my project</message>
                 <path>${project.distributionManagement.site.url}</path>
                 <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
                 <dryRun>true</dryRun>
                 
             </configuration>
+            <goals>
+                <goal>site</goal>
+            </goals>
+            <phase>site</phase>
         </execution>
 		</executions>
       </plugin>
@@ -213,4 +206,5 @@
       </plugins>
     </pluginManagement>
   </build>
+  
 </project>
