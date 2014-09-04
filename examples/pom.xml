@@ -4,7 +4,7 @@
 
   <groupId>soa.gtsntzs</groupId>
   <artifactId>examples</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.41</version>
   <packaging>pom</packaging>
   <name>Examples :: Aggregator</name>
   <description>
