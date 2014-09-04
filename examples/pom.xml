@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <groupId>soa.gtsntzs</groupId>
   <artifactId>examples</artifactId>
   <version>0.5-SNAPSHOT</version>
@@ -37,10 +37,10 @@
     <site.deploy.id>gh-pages</site.deploy.id>
     <site.url>http://gtsntzs.github.io/blog</site.url>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-        
+
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
+    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
     <!--
     <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
     -->
@@ -153,14 +153,14 @@
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>${github.site.maven.plugin.version}</version>
-		<executions>
+		    <executions>
         <execution>
             <goals>
                 <goal>site</goal>
             </goals>
             <phase>site-deploy</phase>
             <configuration>
-				<repositoryName>blog</repositoryName>
+				        <repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
                 <userName>gtsntzs</userName>
                 <server>github</server>

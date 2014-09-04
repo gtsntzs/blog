@@ -3,13 +3,13 @@
 
 This is a collection of examples using modern frameworks mainly in Java language.
 
-a list of frameworks being used is: 
+a list of frameworks being used is:
 
 * Apache Camel
 * Apache Lucene
 * Spring IO
-* Maven 
-	
+* Maven
+
 containers like:
 
 * Fabric8.io
@@ -21,7 +21,7 @@ and persistence providers :
 * Apache Sorl
 * RedisIO
 
---- 
+---
 
 ## Prerequisite
 

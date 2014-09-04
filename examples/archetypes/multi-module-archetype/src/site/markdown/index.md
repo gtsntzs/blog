@@ -1,12 +1,13 @@
-##Purpose 
+##Purpose
 
-A simple custom Maven Archetype example for java projects generation.
+A custom Maven Archetype that creates a multi module Maven project.
 
----
 
 ## Procedure
 
-Generate a simple project or by using maven-archetype-archetype. Create the project structure in  the archetype-resources as wished. 
+As it was shown in [simple archetype](http://gtsntzs.github.io/blog/archetypes/simple-archetype/index.html) the main parts are the same
+
+Generate a simple project or by using maven-archetype-archetype. Create the project structure in  the archetype-resources as wished.
 
 	simple-archetype
 	├── pom.xml
@@ -34,27 +35,27 @@ Generate a simple project or by using maven-archetype-archetype. Create the proj
 The simple-archetype pom requires to be packaged as maven-archetype and to include the archetype-packaging and maven-archetype-plugin plugins in the build tag.
 
 ```xml
-<project 
-	xmlns="http://maven.apache.org/POM/4.0.0" 
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  
+
   <parent>
 	 <groupId>soa.gtsntzs</groupId>
 	 <artifactId>archetypes</artifactId>
 	 <version>1.0.0</version>
   </parent>
-  
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>soa.gtsntzs.archetypes</groupId>
   <artifactId>simple-archetype</artifactId>
   <version>1.0-SNAPSHOT</version>
   <!-- packaging is maven-archetype! -->
   <packaging>maven-archetype</packaging>
-  
+
   <url>http://gtsntzs.github</url>
   <name>Simple :: Archetype</name>
-    
+
   <description>
 		Simple Archetype.
   </description>
@@ -78,7 +79,7 @@ The simple-archetype pom requires to be packaged as maven-archetype and to inclu
       </plugins>
     </pluginManagement>
   </build>
- 
+
 </project>
 ```
 
@@ -89,18 +90,18 @@ The simple-archetype pom requires to be packaged as maven-archetype and to inclu
 	META-INF
 	    │           └── maven
 	    │               └── archetype-metadata.xml
-    
-in the META-INF directory create a maven folder and in the folder an archetype-metadata.xml where the metadata will be specified. As metadata tags the requiredProperties define the version of the dependency to be used and the fileSets the directory structure. In a fileSet by using the includes tag only files sutisfing the specified pattern will be created in the new project. When the includes is not being used then all folders will be included as long as the have a file of any  extension as shown in the src/site directory. 
+
+in the META-INF directory create a maven folder and in the folder an archetype-metadata.xml where the metadata will be specified. As metadata tags the requiredProperties define the version of the dependency to be used and the fileSets the directory structure. In a fileSet by using the includes tag only files sutisfing the specified pattern will be created in the new project. When the includes is not being used then all folders will be included as long as the have a file of any  extension as shown in the src/site directory.
 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor 
-    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" 
+<archetype-descriptor
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
     name="simple-archetype-java"
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
+
   <requiredProperties>
     <requiredProperty key="log4j-version">
       <defaultValue>1.2.17</defaultValue>
@@ -164,14 +165,14 @@ in the META-INF directory create a maven folder and in the folder an archetype-m
 	    ├── archetype-resources
 	       ├── pom.xml
 
-The desired pom will import the groupId, artifactId, version will be given manualy by adding the tags in the mvn command or through the interactive mode. The *-version properties will be inserted from the archetype-metadata.xml specified above. 
+The desired pom will import the groupId, artifactId, version will be given manualy by adding the tags in the mvn command or through the interactive mode. The *-version properties will be inserted from the archetype-metadata.xml specified above.
 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 							 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
@@ -263,18 +264,18 @@ Once everything is specified as needed, install the archetype to the local repos
 ```
 The archetype is ready for use:
 ```sh
-mvn archetype:generate 
-        -DarchetypeGroupId=soa.gtsntzs.archetypes 
-        -DarchetypeArtifactId=simple-archetype 
+mvn archetype:generate
+        -DarchetypeGroupId=soa.gtsntzs.archetypes
+        -DarchetypeArtifactId=simple-archetype
         -DarchetypeVersion=1.0-SNAPSHOT
-        -DgroupId=test.group 
+        -DgroupId=test.group
         -DartifactId=test```
 ```
 
-##Output 
- 
+##Output
+
 The produced project structure is:
- 
+
 	test/
 	├── pom.xml
 	└── src
@@ -296,17 +297,16 @@ The produced project structure is:
 
 
 ##tips & tricks
- 
-* in App.java define package as : package ${groupId};
-* remove from fileSet the includes tyg if all subfolder containing a file is required.    
-* generate an archetype using an archetype! Replace archetype.xml with a archetype-metadata.xml as shown 
 
-```sh 
-        mvn archetype:generate 
-	        -DgroupId=[your project's group id] 
-	        -DartifactId=[your project's artifact id] 
+* in App.java define package as : package ${groupId};
+* remove from fileSet the includes tyg if all subfolder containing a file is required.
+* generate an archetype using an archetype! Replace archetype.xml with a archetype-metadata.xml as shown
+
+```sh
+        mvn archetype:generate
+	        -DgroupId=[your project's group id]
+	        -DartifactId=[your project's artifact id]
 	        -DarchetypeArtifactId=maven-archetype-archetype
 ```
 
 
-> Written with [StackEdit](https://stackedit.io/).
