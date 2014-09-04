@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0                                            http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="simple-archetype-java">
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd">
   <requiredProperties>
-    <!--  properties -->
     <!-- project properties -->
     <requiredProperty key="java-version">
       <defaultValue>1.7</defaultValue>
     </requiredProperty>
+
+    <!-- framework properties -->
+    <requiredProperty key="spring-version">
+      <defaultValue>4.0.6.RELEASE</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="camel-version">
+      <defaultValue>2.13.2</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="lucene-version">
+      <defaultValue>4.9.0</defaultValue>
+    </requiredProperty>
+
+    <!-- commons properties -->
+    <requiredProperty key="commons-io-version">
+      <defaultValue>2.4</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="commons-lang-version">
+      <defaultValue>3.3.2</defaultValue>
+    </requiredProperty>
+
+    <!-- web properties -->
+    <requiredProperty key="jersey-version">
+      <defaultValue>1.18.1</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="servlet-version">
+      <defaultValue>3.1.0</defaultValue>
+    </requiredProperty>
+
+    <!-- data format properties -->
+    <requiredProperty key="jackson-version">
+      <defaultValue>1.9.13</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="json-version">
+      <defaultValue>20140107</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="xstream-version">
+      <defaultValue>1.4.7</defaultValue>
+    </requiredProperty>
+
     <!-- logging properties -->
     <requiredProperty key="slf4j-version">
       <defaultValue>1.7.7</defaultValue>
@@ -13,10 +51,18 @@
     <requiredProperty key="log4j-version">
       <defaultValue>1.2.17</defaultValue>
     </requiredProperty>
+
     <!-- test properties -->
+    <requiredProperty key="testng-version">
+      <defaultValue>6.8.8</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="mockito-version">
+      <defaultValue>1.9.5</defaultValue>
+    </requiredProperty>
     <requiredProperty key="junit-version">
       <defaultValue>4.11</defaultValue>
     </requiredProperty>
+
     <!-- plugin properties -->
     <requiredProperty key="maven-compiler-plugin-version">
       <defaultValue>2.5.1</defaultValue>
@@ -24,8 +70,10 @@
     <requiredProperty key="maven-resources-plugin-version">
       <defaultValue>2.6</defaultValue>
     </requiredProperty>
+
   </requiredProperties>
   <fileSets>
+
     <!-- Parent Directory Structure -->
     <fileSet filtered="true" encoding="UTF-8">
       <directory></directory>
@@ -37,6 +85,7 @@
     <fileSet encoding="UTF-8">
       <directory>src/site</directory>
     </fileSet>
+
     <!-- Module Directory Structure -->
     <fileSet filtered="true" encoding="UTF-8">
       <directory>__artifactId__-example</directory>
