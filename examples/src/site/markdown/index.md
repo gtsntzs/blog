@@ -15,7 +15,8 @@ Description of how to run build the examples.
 
 ## Tips and Tricks
 
-[github &raquo;][tipstricks]
-
-[tipstricks]: tipstricks.html
+[github][tipstricks], [maven][maven], [lighttable][lighttable]
+[tipstricks]: tools/github.html
+[maven]: tools/maven.html
+[lighttable]: tools/lighttable.html
 
