@@ -65,12 +65,10 @@
           <sections>
             <columns>2</columns>
             <body/>
-            <sidebar />
           </sections>
         </index>
 
         <info>
-          <toc>false</toc>
           <breadcrumbs>false</breadcrumbs>
           <sections>
             <columns>2</columns>
@@ -79,6 +77,7 @@
         </info>
 
         <contribute>
+          <titleTemplate>Contribute</titleTemplate>
           <breadcrumbs>false</breadcrumbs>
         </contribute>
 

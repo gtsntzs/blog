@@ -1,7 +1,3 @@
-## Prerequisite
-
-In order to use the examples you need to have maven 3.2.1 and above, the git version control system and java 1.7 or greater.
-
 
 ## In Brief
 
@@ -25,6 +21,9 @@ and persistence providers :
 * Apache Sorl
 * RedisIO
 
+## Prerequisite
+
+In order to use the examples you need to have maven 3.2.1 and above, the git version control system and java 1.7 or greater.
 
 ## Maven Project Structure
 
@@ -44,7 +43,7 @@ and for plug-in configuration in respective POM files.
 
 ---
 
-### Acknowledgement
+## Acknowledgement
 
 Some tools made this place to exist:
 
