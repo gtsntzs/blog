@@ -40,9 +40,10 @@
 
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
-    <!--
     <site.deploy.url>file:///media/Work/online/deploy</site.deploy.url>
+    <!--
+<site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
+
     -->
     <!-- maven report plugins -->
     <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
@@ -113,6 +114,7 @@
           <skipDeploy>false</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
+            <!--
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-javadoc-plugin</artifactId>
@@ -129,7 +131,7 @@
                   </reports>
                 </reportSet>
               </reportSets>
-            </plugin>
+            </plugin> -->
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -137,10 +139,10 @@
               <reportSets>
                 <reportSet>
                   <reports>
-                    <report>summary</report>
-                    <report>license</report>
                     <report>modules</report>
-                    <report>project-team</report>
+                 <!--   <report>summary</report>
+                    <report>license</report>
+                    <report>project-team</report> -->
                   </reports>
                 </reportSet>
               </reportSets>
@@ -148,7 +150,7 @@
           </reportPlugins>
         </configuration>
       </plugin>
-      <!-- -->
+      <!--
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
@@ -172,6 +174,7 @@
         </execution>
 		</executions>
       </plugin>
+-->
 	<!-- -->
 	  <plugin>
         <groupId>org.apache.maven.plugins</groupId>

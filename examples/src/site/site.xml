@@ -6,18 +6,18 @@
 				<span class="color-highlight">Modern Java Examples</span>
 			]]>
 	</name>
-  <href>http://localhost:9000/</href>
+  <href>file:///media/Work/online/deploy/index.html</href>
   </bannerLeft>
-  
+
   <publishDate position="bottom" format="yyyy-MM-dd"/>
   <version position="bottom"/>
-  
+
   <skin>
     <groupId>lt.velykis.maven.skins</groupId>
     <artifactId>reflow-maven-skin</artifactId>
     <version>1.1.1</version>
   </skin>
-  
+
   <custom>
     <reflowSkin>
       <!-- Make this to 'false' for local development, i.e. file:// URLs -->
@@ -30,13 +30,13 @@
       <brand>
         <!-- Brand text in top-left part of the site -->
         <name><![CDATA[<span class="color-highlight">Java Examples</span> Project]]></name>
-        <href>http://localhost:9000/</href>
+        <href>file:///media/Work/online/deploy/index.html</href>
       </brand>
       <slogan>Modern Java</slogan>
       <titleTemplate>%2$s | %1$s</titleTemplate>
       <!-- Use Table of Contents at the top of the page (max 6 elements) -->
       <toc>top</toc>
-      <tocTopMax>9</tocTopMax>
+      <tocTopMax>7</tocTopMax>
       <!-- Include the documentation and tools in the top navigation (in addition to links) -->
       <topNav>Aggregators|Parents|Contribute</topNav>
       <!-- Split menus in the bottom navigation -->
@@ -48,8 +48,10 @@
       <bottomDescription>
         This is a very good example collection doing interesting and valuable things.
       </bottomDescription>
+
       <pages>
-        <index project="reflow-parent">
+
+        <index project="examples">
           <!-- Override the title -->
           <titleTemplate>Java Examples</titleTemplate>
           <!-- no breadcrumbs on the main index page -->
@@ -58,34 +60,39 @@
           <toc>false</toc>
           <markPageHeader>true</markPageHeader>
           <sections>
-            <!-- <carousel /> -->
             <columns>2</columns>
             <body/>
-            <sidebar/>
           </sections>
         </index>
+
         <contribute>
           <breadcrumbs>false</breadcrumbs>
         </contribute>
+
         <!-- Disable source highlighting for Maven reports -->
         <source-repository>
           <highlightJs>false</highlightJs>
         </source-repository>
+
         <issue-tracking>
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </issue-tracking>
+
         <license>
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </license>
+
         <!-- Disable ToC for some Maven reports -->
         <project-info>
           <toc>false</toc>
         </project-info>
+
         <github-report>
           <toc>false</toc>
         </github-report>
+
         <advanced>
           <sections>
             <body />
@@ -93,12 +100,15 @@
             <body />
           </sections>
         </advanced>
+
         <dependencies>
           <tocTopMax>4</tocTopMax>
         </dependencies>
+
       </pages>
     </reflowSkin>
   </custom>
+
   <body>
     <breadcrumbs>
       <item name="Java Examples" href="/"/>
