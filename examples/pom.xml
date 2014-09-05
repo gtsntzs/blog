@@ -4,7 +4,7 @@
 
   <groupId>soa.gtsntzs</groupId>
   <artifactId>examples</artifactId>
-  <version>0.41</version>
+  <version>0.42</version>
   <packaging>pom</packaging>
   <name>Examples :: Aggregator</name>
   <description>
@@ -37,20 +37,11 @@
     <github.global.server>github</github.global.server>
     <site.deploy.id>gh-pages</site.deploy.id>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-<<<<<<< HEAD
     <site.url>https://gtsntzs.github.io/blog/</site.url>
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-	<site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
-=======
-
-    <repositoryName>blog</repositoryName>
-    <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
->>>>>>> development
-    <!--
-    <site.deploy.url />
-    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url> 
+    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>  
+    <!-- <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
     -->
     <!-- maven report plugins -->
     <maven.site.plugin>3.3</maven.site.plugin>
@@ -120,6 +111,7 @@
           <skipDeploy>false</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
+            <!--
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-javadoc-plugin</artifactId>
@@ -136,7 +128,7 @@
                   </reports>
                 </reportSet>
               </reportSets>
-            </plugin>
+            </plugin> -->
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -144,10 +136,10 @@
               <reportSets>
                 <reportSet>
                   <reports>
-                    <report>summary</report>
-                    <report>license</report>
                     <report>modules</report>
-                    <report>project-team</report>
+                    <!--   <report>summary</report>
+                    <report>license</report>
+                    <report>project-team</report> -->
                   </reports>
                 </reportSet>
               </reportSets>
@@ -155,15 +147,19 @@
           </reportPlugins>
         </configuration>
       </plugin>
+<<<<<<< HEAD
       <!-- 
+=======
+      <!--
+>>>>>>> development
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>${github.site.maven.plugin.version}</version>
-		    <executions>
+      <executions>
         <execution>
             <configuration>
-				        <repositoryName>blog</repositoryName>
+            <repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
                 <message>Building site for my project</message>
                 <path>${project.distributionManagement.site.url}</path>
@@ -176,11 +172,17 @@
             </goals>
             <phase>site</phase>
         </execution>
-		</executions>
+  </executions>
       </plugin>
+<<<<<<< HEAD
       -->
 	<!-- -->
 	  <plugin>
+=======
+-->
+      <!-- -->
+      <plugin>
+>>>>>>> development
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <version>2.4.2</version>
@@ -188,14 +190,14 @@
           <pushChanges>true</pushChanges>
           <localCheckout>true</localCheckout>
         </configuration>
-         <dependencies>
-            <dependency>
-               <groupId>org.apache.maven.scm</groupId>
-               <artifactId>maven-scm-provider-gitexe</artifactId>
-               <!-- This version is necessary for use with git version 1.8.5 -->
-               <version>1.8.1</version>
-            </dependency>
-         </dependencies>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <!-- This version is necessary for use with git version 1.8.5 -->
+            <version>1.8.1</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
     </plugins>
