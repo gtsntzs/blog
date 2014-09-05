@@ -140,7 +140,7 @@
                 <reportSet>
                   <reports>
                     <report>modules</report>
-                 <!--   <report>summary</report>
+                    <!--   <report>summary</report>
                     <report>license</report>
                     <report>project-team</report> -->
                   </reports>
@@ -155,14 +155,14 @@
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>${github.site.maven.plugin.version}</version>
-		    <executions>
+      <executions>
         <execution>
             <goals>
                 <goal>site</goal>
             </goals>
             <phase>site-deploy</phase>
             <configuration>
-				        <repositoryName>blog</repositoryName>
+            <repositoryName>blog</repositoryName>
                 <repositoryOwner>gtsntzs</repositoryOwner>
                 <userName>gtsntzs</userName>
                 <server>github</server>
@@ -172,11 +172,11 @@
                 <merge>true</merge>
             </configuration>
         </execution>
-		</executions>
+  </executions>
       </plugin>
 -->
-	<!-- -->
-	  <plugin>
+      <!-- -->
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <version>2.4.2</version>
@@ -184,14 +184,14 @@
           <pushChanges>false</pushChanges>
           <localCheckout>true</localCheckout>
         </configuration>
-         <dependencies>
-            <dependency>
-               <groupId>org.apache.maven.scm</groupId>
-               <artifactId>maven-scm-provider-gitexe</artifactId>
-               <!-- This version is necessary for use with git version 1.8.5 -->
-               <version>1.8.1</version>
-            </dependency>
-         </dependencies>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <!-- This version is necessary for use with git version 1.8.5 -->
+            <version>1.8.1</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
     </plugins>
