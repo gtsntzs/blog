@@ -11,6 +11,8 @@
   <version>0.43-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Archetypes :: Parent</name>
+  
+  <url>${site.url}/archetypes</url>
   <description>
 		The parent module for the archetype projects.
     </description>

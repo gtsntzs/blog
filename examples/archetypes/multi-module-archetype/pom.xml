@@ -16,6 +16,8 @@
   <packaging>maven-archetype</packaging>
   
   <name>Multi Module :: Archetype</name>
+
+  <url>${site.url}/archetypes/multi-module-archetype</url>
     
   <description>
 		Archetype for generating multi-module projects.
