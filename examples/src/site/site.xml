@@ -69,6 +69,15 @@
           </sections>
         </index>
 
+        <info>
+          <toc>false</toc>
+          <breadcrumbs>false</breadcrumbs>
+          <sections>
+            <columns>2</columns>
+            <body/>
+          </sections>
+        </info>
+
         <contribute>
           <breadcrumbs>false</breadcrumbs>
         </contribute>

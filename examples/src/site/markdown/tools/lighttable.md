@@ -10,14 +10,14 @@ Best file editor!
 
 ## Configuration
 
-**Settings: user behavior** --> define your own style
+**Settings: user behaviors** --> define your own style
 
 ```yml
 {:+ {
      ;; The app tag is kind of like global scope. You assign behaviors that affect
      ;; all of Light Table here
      :app [:lt.objs.sidebar.workspace/workspace.open-on-start
-           (:lt.objs.files/file.ignore-pattern "target/|pom.xml.versionsBackup|\\.git/|\\.swp")
+           (:lt.objs.files/file.ignore-pattern "\\target/|pom.xml.versionsBackup|\\.git/|\\.swp")
            (:lt.plugins.gitlight/config {:git-binary "git":max-history 64})
            (:lt.objs.style/set-skin "dark")]
 
