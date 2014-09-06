@@ -1,19 +1,23 @@
-
 ---
 
-## lighttable
+## Github
+
+### Line highlighting
+
++ Create Github Links to point to a block of code, e.x.
+  **$codeFileUrl#L17-24** to specify highlighting lines 17 to 24.
+
+## Lighttable
 
 Best file editor!
 
-## plugins
+### plugins
 
 + gitlight - easy fit integration
 + markdown - easy markdown editor with live view
 + smart-ignore - ignore files or folders, gitignore like
 
-## Configuration
-
-**Settings: user behaviors** --> define your own style
+### Settings: user behaviors
 
 ```yml
 {:+ {
@@ -40,7 +44,7 @@ Best file editor!
 
 ```
 
-** Settings: user keymap ** --> define your own shortcuts
+### Settings: user keymap
 
 ```yml
 {:+ {:app {}
@@ -52,4 +56,12 @@ Best file editor!
      }
  }
 
+```
+
+## Apache Maven
+
+### Versioning
+* Change the version of of a project, if project is a parent or aggregator will change the version to all subsequent child project.
+```sh
+mvn versions:set -DnewVersion=0.43-SNAPSHOT
 ```

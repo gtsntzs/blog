@@ -40,8 +40,9 @@
     <site.url>https://gtsntzs.github.io/blog/</site.url>
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
+    <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url> 
+    <!-- 
     <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>  
-    <!-- <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
     -->
     <!-- maven report plugins -->
     <maven.site.plugin>3.3</maven.site.plugin>
@@ -147,11 +148,7 @@
           </reportPlugins>
         </configuration>
       </plugin>
-<<<<<<< HEAD
-      <!-- 
-=======
       <!--
->>>>>>> development
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
@@ -174,15 +171,9 @@
         </execution>
   </executions>
       </plugin>
-<<<<<<< HEAD
       -->
-	<!-- -->
-	  <plugin>
-=======
--->
       <!-- -->
       <plugin>
->>>>>>> development
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <version>2.4.2</version>

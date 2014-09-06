@@ -1,3 +1,4 @@
+---
 
 ## In Brief
 
@@ -40,6 +41,12 @@ Look for the site configuration and web page sources in `/src/site` of each modu
 and for plug-in configuration in respective POM files.
 
 [reflow-src]: http://github.com/andriusvelykis/reflow-maven-skin "Reflow Maven skin source code"
+
+## Tools
+
+The tools being used: [Tools][tools]
+
+[tools]: tools.html
 
 ---
 

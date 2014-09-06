@@ -43,7 +43,9 @@
       <bottomDescription>
         This is a very good example collection doing interesting and valuable things.
       </bottomDescription>
+
       <pages>
+
         <index project="examples">
           <!-- Override the title -->
           <titleTemplate>Java Examples</titleTemplate>
@@ -57,36 +59,64 @@
             <body/>
           </sections>
         </index>
+
+        <tools>
+          <breadcrumbs>false</breadcrumbs>
+          <titleTemplate>Tools</titleTemplate>
+          <sections>
+            <columns>2</columns>
+            <body/>
+          </sections>
+        </tools>
+
         <info>
           <breadcrumbs>false</breadcrumbs>
+          <titleTemplate>Info</titleTemplate>
+          <sections>
+            <columns>2</columns>
+            <body/>
+            <sidebar />
+          </sections>
+        </info>
+
+        <info>
+          <breadcrumbs>false</breadcrumbs>
+          <titleTemplate>Info</titleTemplate>
           <sections>
             <columns>2</columns>
             <body/>
           </sections>
         </info>
+
         <contribute>
           <titleTemplate>Contribute</titleTemplate>
           <breadcrumbs>false</breadcrumbs>
         </contribute>
         <!-- Disable source highlighting for Maven reports -->
+
         <source-repository>
           <highlightJs>false</highlightJs>
         </source-repository>
+
         <issue-tracking>
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </issue-tracking>
+
         <license>
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </license>
         <!-- Disable ToC for some Maven reports -->
+
         <project-info>
           <toc>false</toc>
         </project-info>
+
         <github-report>
           <toc>false</toc>
         </github-report>
+
         <advanced>
           <sections>
             <columns>2</columns>
@@ -94,12 +124,15 @@
             <sidebar/>
           </sections>
         </advanced>
+
         <dependencies>
           <tocTopMax>4</tocTopMax>
         </dependencies>
+
       </pages>
     </reflowSkin>
   </custom>
+
   <body>
     <breadcrumbs>
       <item name="Java Examples" href="/"/>
