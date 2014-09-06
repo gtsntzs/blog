@@ -13,11 +13,5 @@ Every project has its own documentation site. Every Aggregator module summarizes
 
 Description of how to run build the examples.
 
-## Tips and Tricks
 
-[github][github], [maven][maven], [lighttable][lighttable]
-
-[github]: tools/github.html
-[maven]: tools/maven.html
-[lighttable]: tools/lighttable.html
 
