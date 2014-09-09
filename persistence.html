@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Java Examples</title>
+		<title>Persistence | Sphinx4SOC</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-index project-examples" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-persistence project-examples" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -100,27 +100,63 @@
 			</div>
 		</div>
 	</div>
+		<div>
+			<ul class="breadcrumb">
+				<li><a href="./" title="Java Examples">Java Examples</a></li>
+				<li class="divider">/</li>
+				<li>Persistence</li>
+			</ul>
+		</div>
+		<hr class="toc-separator" />
+		<div id="toc-bar" class="navbar" data-spy="affix" data-offset-top="250">
+			<div class="navbar-inner">
+				<div id="toc-scroll-target" class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target="#toc-nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<div class="nav-collapse collapse" id="toc-nav-collapse">
+						<ul id="toc" class="nav">
+						<li class="toplevel"><a href="#Persistence" title="Persistence">Persistence</a></li>
+						<li class="dropdown">
+							<a href="#Cassandra" title="Cassandra" class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#">Cassandra <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu">
+								<!-- Repeat the item, otherwise it is not clickable as the dropdown root -->
+								<li><a href="#Cassandra" title="Cassandra">Cassandra</a></li>
+								<li class="divider"></li>
+								<li><a href="#Local_Cluster_with_Vagrant" title="Local Cluster with Vagrant">Local Cluster with Vagrant</a></li>
+								<li><a href="#Local_Cluster_with_fabric8io" title="Local Cluster with fabric8.io">Local Cluster with fabric8.io</a></li>
+
+							</ul>
+						</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<div class="main-body">
-	<div class="row columns columns2">
-		<div class="span6">
-			
-		</div>
-	</div>
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-				<div class="section"> 
- <div class="page-header">
-  <h2 id="General">General</h2>
- </div> 
- <p>Every project has its own documentation site. Every Aggregator module summarizes the purpose with some general ideas of the ones to follow. In every Parent module will be reports on dependency management, licence info, plugin management… and a small summary of the child examples. Lastly every example module will have reports on every aspect of its nature and a detailed blog entry providing necessary explanations when needed.</p> 
- <p><a href="info.html">More info &raquo;</a></p> 
-</div> 
+<hr /> 
 <div class="section"> 
- <h2 id="In_Action">In Action</h2> 
- <p>Description of how to run build the examples.</p> 
+ <div class="page-header">
+  <h2 id="Persistence">Persistence</h2>
+ </div> 
+ <div class="section"> 
+  <h3 id="Cassandra">Cassandra</h3> 
+  <div class="section"> 
+   <h4 id="Local_Cluster_with_Vagrant">Local Cluster with Vagrant</h4> 
+   <p>Starting a Cassandra cluster on a local machine can be done easily using VirtualBoxes and Vagrant to manage them. This post is mainly influenced by <a class="externalLink" href="https://github.com/bcantoni">bcantoni</a>.</p> 
+  </div> 
+  <div class="section"> 
+   <h4 id="Local_Cluster_with_fabric8io">Local Cluster with fabric8.io</h4> 
+   <p>Using <a class="externalLink" href="http://fabric8.io/">fabric8.io</a> is the simpliest way to start a Cassandra cluster.</p> 
+  </div> 
+ </div> 
 </div>
 			</div>
 		</div>
