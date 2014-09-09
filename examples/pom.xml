@@ -40,9 +40,9 @@
     <site.url>https://gtsntzs.github.io/blog/</site.url>
     <repositoryName>blog</repositoryName>
     <repositoryOwner>gtsntzs</repositoryOwner>
-    <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url> 
-    <!-- 
-    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>  
+    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages</site.deploy.url>
+    <!--
+    <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
     -->
     <!-- maven report plugins -->
     <maven.site.plugin>3.3</maven.site.plugin>
@@ -109,7 +109,7 @@
           <outputEncoding>${encoding}</outputEncoding>
           <siteDirectory>${project.basedir}/src/site</siteDirectory>
           <!-- Site deployment done using GitHub site plugin -->
-          <skipDeploy>false</skipDeploy>
+          <skipDeploy>true</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
             <!--
@@ -148,30 +148,29 @@
           </reportPlugins>
         </configuration>
       </plugin>
-      <!--
+
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
         <version>${github.site.maven.plugin.version}</version>
-      <executions>
-        <execution>
-            <configuration>
-            <repositoryName>blog</repositoryName>
-                <repositoryOwner>gtsntzs</repositoryOwner>
-                <message>Building site for my project</message>
-                <path>${project.distributionManagement.site.url}</path>
-                <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
-                <dryRun>true</dryRun>
-                
-            </configuration>
-            <goals>
-                <goal>site</goal>
-            </goals>
-            <phase>site</phase>
-        </execution>
-  </executions>
+        <executions>
+          <execution>
+              <configuration>
+                  <repositoryName>blog</repositoryName>
+                  <repositoryOwner>gtsntzs</repositoryOwner>
+                  <message>Building site for my project</message>
+                  <path>${project.distributionManagement.site.url}</path>
+                  <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+                  <dryRun>true</dryRun>
+              </configuration>
+              <goals>
+                  <goal>site</goal>
+              </goals>
+              <phase>site-deploy</phase>
+          </execution>
+        </executions>
       </plugin>
-      -->
+
       <!-- -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -207,5 +206,5 @@
       </plugins>
     </pluginManagement>
   </build>
-  
+
 </project>

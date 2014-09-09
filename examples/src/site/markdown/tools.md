@@ -65,3 +65,41 @@ Best file editor!
 ```sh
 mvn versions:set -DnewVersion=0.43-SNAPSHOT
 ```
+
+
+## Vagrant
+
+### Create Vagrant custom Boxes
+
+http://www.skoblenick.com/vagrant/creating-a-custom-box-from-scratch/
+
+Before we use Vagrant its necessary to create a custom Virtual Box. Using the standar GUI of the VirtualBox, if someone prefers to write scripts [here](http://www.halfdog.net/Misc/TipsAndTricks/VirtualBox.html) is a nice source. No matter how we created the vbox files, we keep notice the vboc name we want to import to Vagrant. First we create the Vagrant box by using the command:
+
+* vagrant package --base Ubuntu14.04Server --output ./Ubu14.04S_J.box
+
+when its ready (it takes a while), we are ready for the import. Simply run the command
+
+* vagrant box add Ubu14.04S_J ./Ubu14.04S_J.box
+
+verify the ~/.vagrant/boxes/Ubu14.04S_J is in place.
+
+
+
+BUG - in case u see this:
+
+<span style="color:red">
+Failed to mount folders in Linux guest. This is usually because
+the "vboxsf" file system is not available. Please verify that
+the guest additions are properly installed in the guest and
+can work properly. The command attempted was:
+
+mount -t vboxsf -o uid=`id -u vagrant`,gid=`getent group vagrant | cut -d: -f3` vagrant /vagrant
+mount -t vboxsf -o uid=`id -u vagrant`,gid=`id -g vagrant` vagrant /vagrant
+
+The error output from the last command was:
+
+stdin: is not a tty
+mount: unknown filesystem type 'vboxsf'
+</span>
+
+Solution - vagrant plugin install vagrant-vbguest
