@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Persistence | Sphinx4SOC</title>
+		<title>Project Modules | Archetypes :: Parent</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-persistence project-examples" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-modules project-archetypes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -58,7 +58,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="./"><span class="color-highlight">Java Examples</span> Project</a>
+					<a class="brand" href="../"><span class="color-highlight">Java Examples</span> Project</a>
 					<div class="nav-collapse collapse" id="top-nav-collapse">
 						<ul class="nav pull-right">
 							<li ><a href="https://github.com/gtsntzs/blog/master.zip" title="Download" class="externalLink">Download</a></li>
@@ -66,7 +66,7 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li ><a href="archetypes/index.html" title="Archetypes::Parent">Archetypes::Parent</a></li>
+									<li ><a href="index.html" title="Archetypes::Parent">Archetypes::Parent</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -92,7 +92,7 @@
 		<div class="row" id="banner">
 			<div class="span12">
 				<div class="pull-left">
-					<a href="./" id="bannerLeft"><h1><span class="color-highlight">Modern Java Examples</span></h1></a>
+					<a href="../" id="bannerLeft"><h1><span class="color-highlight">Modern Java Examples</span></h1></a>
 					<p class="lead">Modern Java</p>
 				</div>
 				<div class="pull-right">
@@ -102,9 +102,11 @@
 	</div>
 		<div>
 			<ul class="breadcrumb">
-				<li><a href="./" title="Java Examples">Java Examples</a></li>
+				<li><a href="../" title="Java Examples">Java Examples</a></li>
 				<li class="divider">/</li>
-				<li>Persistence</li>
+				<li><a href="./" title="Archetypes :: Parent">Archetypes :: Parent</a></li>
+				<li class="divider">/</li>
+				<li>Project Modules</li>
 			</ul>
 		</div>
 		<hr class="toc-separator" />
@@ -118,18 +120,7 @@
 					</a>
 					<div class="nav-collapse collapse" id="toc-nav-collapse">
 						<ul id="toc" class="nav">
-						<li class="toplevel"><a href="#Persistence" title="Persistence">Persistence</a></li>
-						<li class="dropdown">
-							<a href="#Cassandra" title="Cassandra" class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#">Cassandra <b class="caret"></b></a>
-							<ul class="dropdown-menu" role="menu">
-								<!-- Repeat the item, otherwise it is not clickable as the dropdown root -->
-								<li><a href="#Cassandra" title="Cassandra">Cassandra</a></li>
-								<li class="divider"></li>
-								<li><a href="#Local_Cluster_with_Vagrant" title="Local Cluster with Vagrant">Local Cluster with Vagrant</a></li>
-								<li><a href="#Local_Cluster_with_fabric8io" title="Local Cluster with fabric8.io">Local Cluster with fabric8.io</a></li>
-
-							</ul>
-						</li>
+						<li class="toplevel"><a href="#Project_Modules" title="Project Modules">Project Modules</a></li>
 						</ul>
 					</div>
 				</div>
@@ -141,22 +132,34 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-<hr /> 
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Persistence">Persistence</h2>
+  <h2 id="Project_Modules">Project Modules</h2>
  </div> 
- <div class="section"> 
-  <h3 id="Cassandra">Cassandra</h3> 
-  <div class="section"> 
-   <h4 id="Local_Cluster_with_Vagrant">Local Cluster with Vagrant</h4> 
-   <p>Starting a Cassandra cluster on a local machine can be done easily using VirtualBoxes and Vagrant to manage them. This post is mainly influenced by <a class="externalLink" href="https://github.com/bcantoni">bcantoni</a>.</p> 
-  </div> 
-  <div class="section"> 
-   <h4 id="Local_Cluster_with_fabric8io">Local Cluster with fabric8.io</h4> 
-   <p>Using <a class="externalLink" href="http://fabric8.io/">fabric8.io</a> is the simpliest way to start a Cassandra cluster.</p> 
-  </div> 
- </div> 
+ <a name="Project_Modules"></a> 
+ <p>This project has declared the following modules:</p> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <thead> 
+   <tr class="a"> 
+    <th>Name</th> 
+    <th>Description</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr class="b"> 
+    <td><a href="simple-archetype/index.html">Simple :: Archetype</a></td> 
+    <td>Simple Archetype Example.</td> 
+   </tr> 
+   <tr class="a"> 
+    <td><a href="multi-module-archetype/index.html">Multi Module :: Archetype</a></td> 
+    <td>Archetype for generating multi-module projects.</td> 
+   </tr> 
+   <tr class="b"> 
+    <td><a href="multi-module-archetype/index.html">Module :: Archetype</a></td> 
+    <td>Module Archetype creates projects prepared for the multimodule generated project.</td> 
+   </tr> 
+  </tbody> 
+ </table> 
 </div>
 			</div>
 		</div>
@@ -188,8 +191,13 @@
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Maven documentation</li>
-						<li >
-							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-right"></i></a>
+						<li class="active">
+							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
+							<ul class="nav nav-list">
+						<li class="active">
+							<a href="#" title="Project Modules">Project Modules</a>
+						</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
