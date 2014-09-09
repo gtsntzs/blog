@@ -38,8 +38,8 @@
     <github.global.server>github</github.global.server>
     <site.deploy.id>gh-pages</site.deploy.id>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-    <site.url>http://gtsntzs.github.io/blog</site.url>
-    <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages/</site.deploy.url>
+    <site.url>https://github.com/gtsntzs/blog</site.url>
+    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages/</site.deploy.url>
     <!--
     <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
     -->
@@ -133,10 +133,6 @@
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-project-info-reports-plugin</artifactId>
               <version>${maven.project.info.reports.plugin}</version>
-              <configuration>
-                <anonymousConnection>scm:git:git@github.com:gtsntzs/blog.git</anonymousConnection>
-                <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
-              </configuration>
               <reportSets>
                 <reportSet>
                   <reports>
@@ -162,9 +158,9 @@
                   <repositoryName>blog</repositoryName>
                   <repositoryOwner>gtsntzs</repositoryOwner>
                   <message>Building site for my project</message>
-                  <!--
+
                   <path>${project.distributionManagement.site.url}</path>
-                  -->
+
                   <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
                   <dryRun>true</dryRun>
               </configuration>
