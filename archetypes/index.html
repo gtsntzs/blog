@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Info</title>
+		<title>Examples | Archetypes :: Parent</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-info project-examples" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-index project-archetypes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -58,15 +58,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="./"><span class="color-highlight">Java Examples</span> Project</a>
+					<a class="brand" href="../"><span class="color-highlight">Java Examples</span> Project</a>
 					<div class="nav-collapse collapse" id="top-nav-collapse">
 						<ul class="nav pull-right">
 							<li ><a href="https://github.com/gtsntzs/blog/master.zip" title="Download" class="externalLink">Download</a></li>
 							<li ><a href="https://github.com/gtsntzs/blog" title="GitHub project" class="externalLink">GitHub project</a></li>
-							<li class="dropdown">
+							<li class="dropdown active">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li ><a href="archetypes/index.html" title="Archetypes::Parent">Archetypes::Parent</a></li>
+									<li class="active"><a href="" title="Archetypes::Parent">Archetypes::Parent</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -92,7 +92,7 @@
 		<div class="row" id="banner">
 			<div class="span12">
 				<div class="pull-left">
-					<a href="./" id="bannerLeft"><h1><span class="color-highlight">Modern Java Examples</span></h1></a>
+					<a href="../" id="bannerLeft"><h1><span class="color-highlight">Modern Java Examples</span></h1></a>
 					<p class="lead">Modern Java</p>
 				</div>
 				<div class="pull-right">
@@ -100,32 +100,14 @@
 			</div>
 		</div>
 	</div>
-		<hr class="toc-separator" />
-		<div id="toc-bar" class="navbar" data-spy="affix" data-offset-top="250">
-			<div class="navbar-inner">
-				<div id="toc-scroll-target" class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target="#toc-nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<div class="nav-collapse collapse" id="toc-nav-collapse">
-						<ul id="toc" class="nav">
-						<li class="toplevel"><a href="#In_Brief" title="In Brief">In Brief</a></li>
-						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#Prerequisite" title="Prerequisite">Prerequisite</a></li>
-						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#Maven_Project_Structure" title="Maven Project Structure">Maven Project Structure</a></li>
-						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#Learn_by_example" title="Learn by example">Learn by example</a></li>
-						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#Tools" title="Tools">Tools</a></li>
-						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#Acknowledgement" title="Acknowledgement">Acknowledgement</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+		<div>
+			<ul class="breadcrumb">
+				<li><a href="../" title="Java Examples">Java Examples</a></li>
+				<li class="divider">/</li>
+				<li><a href="./" title="Archetypes :: Parent">Archetypes :: Parent</a></li>
+				<li class="divider">/</li>
+				<li>Examples</li>
+			</ul>
 		</div>
 	</header>
 
@@ -138,60 +120,13 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-				<div class="section"> 
- <div class="page-header">
-  <h2 id="In_Brief">In Brief</h2>
- </div> 
- <p>This is a collection of examples using modern frameworks mainly in Java language.</p> 
- <p>a list of frameworks being used is:</p> 
- <ul> 
-  <li>Apache Camel</li> 
-  <li>Apache Lucene</li> 
-  <li>Spring IO</li> 
-  <li>Maven</li> 
- </ul> 
- <p>containers like:</p> 
- <ul> 
-  <li>Fabric8.io</li> 
-  <li>Apache Karaf</li> 
- </ul> 
- <p>and persistence providers :</p> 
- <ul> 
-  <li>Apache Cassandra</li> 
-  <li>Apache Sorl</li> 
-  <li>RedisIO</li> 
- </ul> 
-</div> 
-<div class="section"> 
- <h2 id="Prerequisite">Prerequisite</h2> 
- <p>In order to use the examples you need to have maven 3.2.1 and above, the git version control system and java 1.7 or greater.</p> 
-</div> 
-<div class="section"> 
- <h2 id="Maven_Project_Structure">Maven Project Structure</h2> 
- <p>The project structure is organised in a way to make life easier, but first lets put some terminology through. When a project ends with “Aggregator” implies that it ’s none of the other sub-projects are dependent on it. If it contains “Parent” it manages all dependencies and plugins of the sub-projects. When contain none of the above terms its a project Example</p> 
- <p>In order to use an example it has to be packaged by packaging its Parent project.</p> 
-</div> 
-<div class="section"> 
- <h2 id="Learn_by_example">Learn by example</h2> 
- <p>This website itself is generated using Reflow Maven skin and is written in Markdown. The source code is <a class="externalLink" href="http://github.com/andriusvelykis/reflow-maven-skin" title="Reflow Maven skin source code">available on GitHub</a>.</p> 
- <p>Look for the site configuration and web page sources in <tt>/src/site</tt> of each module; and for plug-in configuration in respective POM files.</p> 
-</div> 
-<div class="section"> 
- <h2 id="Tools">Tools</h2> 
- <p>The tools being used: <a href="tools.html">Tools</a></p> 
-</div>
+				<p>The examples contained by the Archetypes :: Parent.</p>
 				<hr />
 				<div class="section"> 
- <h2 id="Acknowledgement">Acknowledgement</h2> 
- <p>Some tools made this place to exist:</p> 
+ <h2 id="Examples">Examples</h2> 
  <ul> 
-  <li>Linux</li> 
-  <li>Java(TM)</li> 
-  <li>Apache</li> 
-  <li>Jboss</li> 
-  <li>Spring IO</li> 
-  <li>git</li> 
-  <li>lighttable</li> 
+  <li><a href="simple-archetype/index.html">simple-archetype</a></li> 
+  <li>more to come</li> 
  </ul> 
 </div>
 			</div>
