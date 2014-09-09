@@ -38,7 +38,7 @@
     <github.global.server>github</github.global.server>
     <site.deploy.id>gh-pages</site.deploy.id>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-    <site.url>https://github.com/gtsntzs/blog</site.url>
+    <site.url>http://gtsntzs.github.com/blog</site.url>
     <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages/</site.deploy.url>
     <!--
     <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
@@ -63,23 +63,7 @@
     <velocity.version>1.7</velocity.version>
     <reflow.velocity.tools.version>1.1.1</reflow.velocity.tools.version>
   </properties>
-  <!-- site generation -->
-  <distributionManagement>
-    <site>
-      <id>${site.deploy.id}</id>
-      <name>Deployment through GitHub's site deployment plugin</name>
-      <url>${site.deploy.url}</url>
-    </site>
-  </distributionManagement>
-  <scm>
-    <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
-    <connection>scm:git:git@github.com:gtsntzs/blog.git</connection>
-    <url>https://github.com/gtsntzs/blog/tree/master</url>
-  </scm>
-  <issueManagement>
-    <system>GitHub</system>
-    <url>${site.github.issues.url}</url>
-  </issueManagement>
+
   <!-- -->
   <build>
     <plugins>
@@ -148,37 +132,13 @@
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>com.github.github</groupId>
-        <artifactId>site-maven-plugin</artifactId>
-        <version>${github.site.maven.plugin.version}</version>
-        <executions>
-          <execution>
-              <configuration>
-                  <repositoryName>blog</repositoryName>
-                  <repositoryOwner>gtsntzs</repositoryOwner>
-                  <message>Building site for my project</message>
-
-                  <path>${project.distributionManagement.site.url}</path>
-
-                  <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
-                  <dryRun>true</dryRun>
-              </configuration>
-              <goals>
-                  <goal>site</goal>
-              </goals>
-              <phase>site-deploy</phase>
-          </execution>
-        </executions>
-      </plugin>
-
       <!-- -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <version>2.4.2</version>
         <configuration>
-          <pushChanges>true</pushChanges>
+          <pushChanges>false</pushChanges>
           <localCheckout>true</localCheckout>
         </configuration>
         <dependencies>
@@ -189,6 +149,15 @@
             <version>1.8.1</version>
           </dependency>
         </dependencies>
+      </plugin>
+
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.9.1</version>
+        <configuration>
+          <connectionType>connection</connectionType>
+        </configuration>
       </plugin>
 
     </plugins>
@@ -208,4 +177,59 @@
     </pluginManagement>
   </build>
 
+  <!-- site generation -->
+  <distributionManagement>
+    <site>
+      <id>${site.deploy.id}</id>
+      <name>Deployment through GitHub's site deployment plugin</name>
+      <url>${site.deploy.url}</url>
+    </site>
+  </distributionManagement>
+  <scm>
+    <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
+    <connection>scm:git:git@github.com:gtsntzs/blog.git</connection>
+    <url>https://github.com/gtsntzs/blog/tree/master</url>
+  </scm>
+  <issueManagement>
+    <system>GitHub</system>
+    <url>${site.github.issues.url}</url>
+  </issueManagement>
+
+ <profiles>
+   <profile>
+      <id>github</id>
+      <properties>
+        <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages/</site.deploy.url>
+      </properties>
+
+      <build>
+        <plugins>
+          <plugin>
+            <!-- GitHub site plug-in for deployment to GitHub pages -->
+            <groupId>com.github.github</groupId>
+            <artifactId>site-maven-plugin</artifactId>
+            <version>${github.site.maven.plugin.version}</version>
+            <configuration>
+              <repositoryName>blog</repositoryName>
+              <repositoryOwner>gtsntzs</repositoryOwner>
+              <message>Building site for my project</message>
+              <path>${project.distributionManagement.site.url}</path>
+              <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+              <dryRun>true</dryRun>
+            </configuration>
+            <executions>
+              <execution>
+                <id>site</id>
+                <goals>
+                  <goal>site</goal>
+                </goals>
+                <phase>site-deploy</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+
+    </profile>
+  </profiles>
 </project>
