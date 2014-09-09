@@ -87,7 +87,6 @@ verify the ~/.vagrant/boxes/Ubu14.04S_J is in place.
 
 BUG - in case u see this:
 
-<span style="color:red">
 Failed to mount folders in Linux guest. This is usually because
 the "vboxsf" file system is not available. Please verify that
 the guest additions are properly installed in the guest and
@@ -100,6 +99,5 @@ The error output from the last command was:
 
 stdin: is not a tty
 mount: unknown filesystem type 'vboxsf'
-</span>
 
 Solution - vagrant plugin install vagrant-vbguest
