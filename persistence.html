@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Project Modules | Sphinx4SOC</title>
+		<title>Persistence | Sphinx4SOC</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-modules project-examples" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-persistence project-examples" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -104,7 +104,7 @@
 			<ul class="breadcrumb">
 				<li><a href="./" title="Java Examples">Java Examples</a></li>
 				<li class="divider">/</li>
-				<li>Project Modules</li>
+				<li>Persistence</li>
 			</ul>
 		</div>
 		<hr class="toc-separator" />
@@ -118,7 +118,18 @@
 					</a>
 					<div class="nav-collapse collapse" id="toc-nav-collapse">
 						<ul id="toc" class="nav">
-						<li class="toplevel"><a href="#Project_Modules" title="Project Modules">Project Modules</a></li>
+						<li class="toplevel"><a href="#Persistence" title="Persistence">Persistence</a></li>
+						<li class="dropdown">
+							<a href="#Cassandra" title="Cassandra" class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#">Cassandra <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu">
+								<!-- Repeat the item, otherwise it is not clickable as the dropdown root -->
+								<li><a href="#Cassandra" title="Cassandra">Cassandra</a></li>
+								<li class="divider"></li>
+								<li><a href="#Local_Cluster_with_Vagrant" title="Local Cluster with Vagrant">Local Cluster with Vagrant</a></li>
+								<li><a href="#Local_Cluster_with_fabric8io" title="Local Cluster with fabric8.io">Local Cluster with fabric8.io</a></li>
+
+							</ul>
+						</li>
 						</ul>
 					</div>
 				</div>
@@ -130,26 +141,22 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
+<hr /> 
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Project_Modules">Project Modules</h2>
+  <h2 id="Persistence">Persistence</h2>
  </div> 
- <a name="Project_Modules"></a> 
- <p>This project has declared the following modules:</p> 
- <table border="0" class="bodyTable table table-striped table-hover"> 
-  <thead> 
-   <tr class="a"> 
-    <th>Name</th> 
-    <th>Description</th> 
-   </tr> 
-  </thead> 
-  <tbody> 
-   <tr class="b"> 
-    <td><a href="archetypes/index.html">Archetypes :: Parent</a></td> 
-    <td>The parent module for the archetype projects.</td> 
-   </tr> 
-  </tbody> 
- </table> 
+ <div class="section"> 
+  <h3 id="Cassandra">Cassandra</h3> 
+  <div class="section"> 
+   <h4 id="Local_Cluster_with_Vagrant">Local Cluster with Vagrant</h4> 
+   <p>Starting a Cassandra cluster on a local machine can be done easily using VirtualBoxes and Vagrant to manage them. This post is mainly influenced by <a class="externalLink" href="https://github.com/bcantoni">bcantoni</a>.</p> 
+  </div> 
+  <div class="section"> 
+   <h4 id="Local_Cluster_with_fabric8io">Local Cluster with fabric8.io</h4> 
+   <p>Using <a class="externalLink" href="http://fabric8.io/">fabric8.io</a> is the simpliest way to start a Cassandra cluster.</p> 
+  </div> 
+ </div> 
 </div>
 			</div>
 		</div>
@@ -181,13 +188,8 @@
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Maven documentation</li>
-						<li class="active">
-							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
-							<ul class="nav nav-list">
-						<li class="active">
-							<a href="#" title="Project Modules">Project Modules</a>
-						</li>
-							</ul>
+						<li >
+							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-right"></i></a>
 						</li>
 					</ul>
 				</div>
