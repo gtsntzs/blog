@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>soa.gtsntzs</groupId>
   <artifactId>examples</artifactId>
   <version>0.45</version>
@@ -32,18 +31,25 @@
     <!-- project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.7</java.version>$
     <encoding>UTF-8</encoding>
-
-    <!-- project site properties -->
+    <!-- site properties -->
     <github.global.server>github</github.global.server>
+    <github.global.userName>gtsntzs</github.global.userName>
     <site.deploy.id>gh-pages</site.deploy.id>
+    <velocity.version>1.7</velocity.version>
+    <reflow-velocity-tools.version>1.1.1</reflow-velocity-tools.version>
+    <site.url>http://gtsntzs.github.io/blog</site.url>
+    <site.deploy.url/>
+    <scm.developerConnection>scm:git:git@github.com:gtsntzs/blog.git</scm.developerConnection>
+    <scm.connection>scm:git:git@github.com:gtsntzs/blog.git</scm.connection>
+    <scm.url>https://github.com/gtsntzs/blog/tree/master</scm.url>
     <site.github.issues.url>https://github.com/gtsntzs/blog/issues</site.github.issues.url>
-    <site.url>http://gtsntzs.github.com/blog</site.url>
-    <site.deploy.url>http://github.com/gtsntzs/blog/tree/gh-pages/</site.deploy.url>
-    <!--
-    <site.deploy.url>file:///media/Work/online/deploy/</site.deploy.url>
-    -->
-    <!-- maven report plugins -->
+    <!-- plugins -->
+    <maven-release-plugin.version>2.4.2</maven-release-plugin.version>
+    <maven-scm-provider-gitexe.version>1.8.1</maven-scm-provider-gitexe.version>
+    <maven-scm-plugin.version>1.9.1</maven-scm-plugin.version>
+    <!-- site report plugins -->
     <maven.site.plugin>3.3</maven.site.plugin>
     <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
     <maven.cobertura.plugin>2.5.1</maven.cobertura.plugin>
@@ -58,12 +64,24 @@
     <maven.versions.plugin>1.3.1</maven.versions.plugin>
     <maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
     <github.site.maven.plugin.version>0.10-SNAPSHOT</github.site.maven.plugin.version>
-    <!-- Dependency versioning properties -->
-    <java.version>1.7</java.version>
-    <velocity.version>1.7</velocity.version>
-    <reflow.velocity.tools.version>1.1.1</reflow.velocity.tools.version>
   </properties>
-
+  <!-- site generation -->
+  <distributionManagement>
+    <site>
+      <name>Deployment through GitHub's site deployment plugin</name>
+      <id>${site.deploy.id}</id>
+      <url>${site.deploy.url}</url>
+    </site>
+  </distributionManagement>
+  <scm>
+    <developerConnection>${scm.developerConnection}</developerConnection>
+    <connection>${scm.connection}</connection>
+    <url>${scm.url}</url>
+  </scm>
+  <issueManagement>
+    <system>${github.global.server}</system>
+    <url>${site.github.issues.url}</url>
+  </issueManagement>
   <!-- -->
   <build>
     <plugins>
@@ -76,7 +94,7 @@
           <dependency>
             <groupId>lt.velykis.maven.skins</groupId>
             <artifactId>reflow-velocity-tools</artifactId>
-            <version>${reflow.velocity.tools.version}</version>
+            <version>${reflow-velocity-tools.version}</version>
           </dependency>
           <!-- Reflow skin requires Velocity >= 1.7 -->
           <dependency>
@@ -95,7 +113,6 @@
           <skipDeploy>true</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
-            <!--
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-javadoc-plugin</artifactId>
@@ -112,7 +129,7 @@
                   </reports>
                 </reportSet>
               </reportSets>
-            </plugin> -->
+            </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -121,9 +138,9 @@
                 <reportSet>
                   <reports>
                     <report>modules</report>
-                    <!--   <report>summary</report>
+                    <report>summary</report>
                     <report>license</report>
-                    <report>project-team</report> -->
+                    <report>project-team</report>
                   </reports>
                 </reportSet>
               </reportSets>
@@ -131,12 +148,34 @@
           </reportPlugins>
         </configuration>
       </plugin>
-
+      <plugin>
+        <!-- GitHub site plug-in for deployment to GitHub pages -->
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>${github.site.maven.plugin.version}</version>
+        <configuration>
+          <repositoryName>blog</repositoryName>
+          <repositoryOwner>gtsntzs</repositoryOwner>
+          <server>github</server>
+          <message>Building site for my project</message>
+          <path>${project.distributionManagement.site.url}</path>
+          <merge>true</merge>
+        </configuration>
+        <executions>
+          <execution>
+            <id>site</id>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>site-deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
       <!-- -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.4.2</version>
+        <version>${maven-release-plugin.version}</version>
         <configuration>
           <pushChanges>false</pushChanges>
           <localCheckout>true</localCheckout>
@@ -146,20 +185,18 @@
             <groupId>org.apache.maven.scm</groupId>
             <artifactId>maven-scm-provider-gitexe</artifactId>
             <!-- This version is necessary for use with git version 1.8.5 -->
-            <version>1.8.1</version>
+            <version>${maven-scm-provider-gitexe.version}</version>
           </dependency>
         </dependencies>
       </plugin>
-
-       <plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-plugin</artifactId>
-        <version>1.9.1</version>
+        <version>${maven-scm-plugin.version}</version>
         <configuration>
           <connectionType>connection</connectionType>
         </configuration>
       </plugin>
-
     </plugins>
     <!-- -->
     <pluginManagement>
@@ -176,60 +213,4 @@
       </plugins>
     </pluginManagement>
   </build>
-
-  <!-- site generation -->
-  <distributionManagement>
-    <site>
-      <id>${site.deploy.id}</id>
-      <name>Deployment through GitHub's site deployment plugin</name>
-      <url>${site.deploy.url}</url>
-    </site>
-  </distributionManagement>
-  <scm>
-    <developerConnection>scm:git:git@github.com:gtsntzs/blog.git</developerConnection>
-    <connection>scm:git:git@github.com:gtsntzs/blog.git</connection>
-    <url>https://github.com/gtsntzs/blog/tree/master</url>
-  </scm>
-  <issueManagement>
-    <system>GitHub</system>
-    <url>${site.github.issues.url}</url>
-  </issueManagement>
-
- <profiles>
-   <profile>
-      <id>github</id>
-      <properties>
-        <site.deploy.url>https://github.com/gtsntzs/blog/tree/gh-pages/</site.deploy.url>
-      </properties>
-
-      <build>
-        <plugins>
-          <plugin>
-            <!-- GitHub site plug-in for deployment to GitHub pages -->
-            <groupId>com.github.github</groupId>
-            <artifactId>site-maven-plugin</artifactId>
-            <version>${github.site.maven.plugin.version}</version>
-            <configuration>
-              <repositoryName>blog</repositoryName>
-              <repositoryOwner>gtsntzs</repositoryOwner>
-              <message>Building site for my project</message>
-              <path>${project.distributionManagement.site.url}</path>
-              <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
-              <dryRun>true</dryRun>
-            </configuration>
-            <executions>
-              <execution>
-                <id>site</id>
-                <goals>
-                  <goal>site</goal>
-                </goals>
-                <phase>site-deploy</phase>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-
-    </profile>
-  </profiles>
 </project>
