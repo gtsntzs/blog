@@ -1,28 +1,21 @@
-<project
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-	 <groupId>soa.gtsntzs</groupId>
-	 <artifactId>archetypes</artifactId>
-	 <version>0.45</version>
+    <groupId>soa.gtsntzs</groupId>
+    <artifactId>archetypes</artifactId>
+    <version>0.45</version>
   </parent>
-
   <groupId>soa.gtsntzs.archetypes</groupId>
   <artifactId>module-archetype</artifactId>
   <version>0.45</version>
   <!-- packaging is maven-archetype! -->
   <packaging>maven-archetype</packaging>
-
   <name>Module :: Archetype</name>
-
+  <url>${site.url}/archetypes/multi-module-archetype</url>
   <description>
 		Module Archetype creates projects prepared for the multimodule generated project.
   </description>
-  <url>${site.url}/archetypes/multi-module-archetype</url>
-
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
@@ -30,5 +23,4 @@
       <url>${site.deploy.url}archetypes/module-archetype</url>
     </site>
   </distributionManagement>
-
 </project>
