@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Purpose | Module :: Archetype</title>
+		<title>Team list | Module :: Archetype</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-index project-module-archetype" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-team-list project-module-archetype" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -108,7 +108,7 @@
 				<li class="divider">/</li>
 				<li><a href="./" title="Module Archetype :: Example">Module Archetype :: Example</a></li>
 				<li class="divider">/</li>
-				<li>Purpose</li>
+				<li>Team list</li>
 			</ul>
 		</div>
 		<hr class="toc-separator" />
@@ -122,7 +122,9 @@
 					</a>
 					<div class="nav-collapse collapse" id="toc-nav-collapse">
 						<ul id="toc" class="nav">
-						<li class="toplevel"><a href="#Purpose" title="Purpose">Purpose</a></li>
+						<li class="toplevel"><a href="#The_Team" title="The Team">The Team</a></li>
+						<li class="toplevel"><a href="#Members" title="Members">Members</a></li>
+						<li class="toplevel"><a href="#Contributors" title="Contributors">Contributors</a></li>
 						</ul>
 					</div>
 				</div>
@@ -136,9 +138,53 @@
 			<div class="body-content">
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Purpose">Purpose</h2>
+  <h2 id="The_Team">The Team</h2>
  </div> 
- <p>A simple custom Maven Archetype example for java projects generation.</p> 
+ <a name="The_Team"></a> 
+ <p>A successful project requires many people to play many roles. Some members write code or documentation, while others are valuable as testers, submitting patches and suggestions.</p> 
+ <p>The team is comprised of Members and Contributors. Members have direct access to the source of a project and actively evolve the code-base. Contributors improve the project through submission of patches and suggestions to the Members. The number of Contributors to the project is unbounded. Get involved today. All contributions to the project are greatly appreciated.</p> 
+ <div class="section"> 
+  <h3 id="Members">Members</h3> 
+  <a name="Members"></a> 
+  <p>The following is a list of developers with commit privileges that have directly contributed to the project in one way or another.</p> 
+  <table border="0" class="bodyTable table table-striped table-hover"> 
+   <thead> 
+    <tr class="a"> 
+     <th>Id</th> 
+     <th>Name</th> 
+     <th>URL</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr class="b"> 
+     <td><a name="gtsntzs"></a>gtsntzs</td> 
+     <td>Georgios Tsontzos</td> 
+     <td><a class="externalLink" href="https://github.com/gtsntzs">https://github.com/gtsntzs</a></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
+ <div class="section"> 
+  <h3 id="Contributors">Contributors</h3> 
+  <a name="Contributors"></a> 
+  <p>There are no contributors listed for this project. Please check back again later.</p> 
+  <script type="text/javascript">
+function offsetDate(id, offset) {
+    var now = new Date();
+    var nowTime = now.getTime();
+    var localOffset = now.getTimezoneOffset();
+    var developerTime = nowTime + ( offset * 60 * 60 * 1000 )+ ( localOffset * 60 * 1000 );
+    var developerDate = new Date(developerTime);
+
+    document.getElementById(id).innerHTML = developerDate;
+}
+
+function init(){
+}
+
+window.onLoad = init();
+</script> 
+ </div> 
 </div>
 			</div>
 		</div>
@@ -170,8 +216,19 @@
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Maven documentation</li>
+						<li class="active">
+							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
+							<ul class="nav nav-list">
 						<li >
-							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-right"></i></a>
+							<a href="project-summary.html" title="Project Summary">Project Summary</a>
+						</li>
+						<li >
+							<a href="license.html" title="Project License">Project License</a>
+						</li>
+						<li class="active">
+							<a href="#" title="Project Team">Project Team</a>
+						</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
