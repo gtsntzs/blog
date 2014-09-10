@@ -4,11 +4,11 @@
   <parent>
     <groupId>soa.gtsntzs</groupId>
     <artifactId>archetypes</artifactId>
-    <version>0.46-SNAPSHOT</version>
+    <version>0.46</version>
   </parent>
   <groupId>soa.gtsntzs.archetypes</groupId>
   <artifactId>module-archetype</artifactId>
-  <version>0.46-SNAPSHOT</version>
+  <version>0.46</version>
   <!-- packaging is maven-archetype! -->
   <packaging>maven-archetype</packaging>
   <name>Module :: Archetype</name>
