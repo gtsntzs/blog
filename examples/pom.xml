@@ -36,6 +36,7 @@
     <!-- site properties -->
     <github.global.server>github</github.global.server>
     <github.global.userName>gtsntzs</github.global.userName>
+    <repositoryName>blog</repositoryName>
     <site.deploy.id>gh-pages</site.deploy.id>
     <velocity.version>1.7</velocity.version>
     <reflow-velocity-tools.version>1.1.1</reflow-velocity-tools.version>
@@ -85,6 +86,7 @@
   <!-- -->
   <build>
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
@@ -147,6 +149,30 @@
           </reportPlugins>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>com.github.jeluard</groupId>
+        <artifactId>plantuml-maven-plugin</artifactId>
+        <version>7941</version>
+        <configuration>
+          <sourceFiles>
+            <directory>${basedir}</directory>
+            <includes>
+              <include>src/site/plantuml/**/*.txt</include>
+            </includes>
+          </sourceFiles>
+          <outputDirectory>${basedir}/src/site/resources/images/plantuml</outputDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -164,6 +190,7 @@
           </dependency>
         </dependencies>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-plugin</artifactId>
@@ -172,6 +199,7 @@
           <connectionType>connection</connectionType>
         </configuration>
       </plugin>
+
     </plugins>
     <!-- -->
     <pluginManagement>
@@ -188,7 +216,9 @@
       </plugins>
     </pluginManagement>
   </build>
+
   <profiles>
+
     <profile>
       <id>github</id>
       <build>
@@ -199,10 +229,10 @@
             <artifactId>site-maven-plugin</artifactId>
             <version>${github.site.maven.plugin.version}</version>
             <configuration>
-              <repositoryName>blog</repositoryName>
-              <repositoryOwner>gtsntzs</repositoryOwner>
-              <server>github</server>
-              <message>Building site for my project</message>
+              <repositoryName>${repositoryName}</repositoryName>
+              <repositoryOwner>${github.global.userName}</repositoryOwner>
+              <server>${github.global.server}</server>
+              <message>Building site for the Examples project</message>
               <path>${project.distributionManagement.site.url}</path>
               <merge>true</merge>
             </configuration>
@@ -219,6 +249,7 @@
         </plugins>
       </build>
     </profile>
+
     <profile>
       <id>siteLocal</id>
       <properties>
@@ -244,5 +275,6 @@
         </plugins>
       </build>
     </profile>
+
   </profiles>
 </project>

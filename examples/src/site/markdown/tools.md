@@ -52,6 +52,10 @@ Best file editor!
      :editor {"alt-w" [:editor.watch.watch-selection]
               "alt-shift-w" [:editor.watch.unwatch]
               "alt-shift-s" [:gitlight-status-toggle]
+              "ctrl-d" [:editor.delete-line]
+              "ctrl-i" [:editor.select-all
+                        :smart-indent-selection
+                        :editor.selection.clear]
               }
      }
  }
@@ -69,6 +73,11 @@ mvn versions:set -DnewVersion=0.43-SNAPSHOT
 ### Profiles
 
 mvn help:active-profiles
+
+## PlantUML
+
+![Alt text](images/plantuml/diagram.png)
+
 
 ## Vagrant
 

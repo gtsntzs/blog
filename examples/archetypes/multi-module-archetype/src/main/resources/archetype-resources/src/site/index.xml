@@ -4,13 +4,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
 
-  <!-- Google Analytics not inherited for some reason -->
-  <googleAnalyticsAccountId>UA-54501187-1</googleAnalyticsAccountId>
-
+  <!-- Google Analytics not inherited for some reason
+  <googleAnalyticsAccountId></googleAnalyticsAccountId>
+  -->
   <custom>
     <reflowSkin>
       <pages>
-        <index project="archetypes" combine.self="override">
+        <index project="${artifactId}" combine.self="override">
           <!-- no ToC on the index page -->
           <toc>false</toc>
         </index>
@@ -20,7 +20,7 @@
 
   <body>
     <breadcrumbs>
-      <item name="Archetypes :: Parent" href="/" />
+      <item name="Name :: Parent" href="/" />
     </breadcrumbs>
   </body>
 </project>

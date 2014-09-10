@@ -1,0 +1,21 @@
+@startuml maven.png
+
+skinparam componentStyle uml2
+skinparam monochrome true
+
+[Module::Archetype] -up-> [MultiModule::Archetype]
+
+note right of [MultiModule::Archetype]
+  contains:
+  * Dependency Versioning
+  * Standar Plugins
+  manages:
+  * Dependencies
+end note
+
+note right of [Module::Archetype]
+  contains:
+  * Special Plugins
+end note
+
+@enduml
