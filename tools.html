@@ -142,9 +142,12 @@
 								<li><a href="#Apache_Maven" title="Apache Maven">Apache Maven</a></li>
 								<li class="divider"></li>
 								<li><a href="#Versioning" title="Versioning">Versioning</a></li>
+								<li><a href="#Profiles" title="Profiles">Profiles</a></li>
 
 							</ul>
 						</li>
+						<li class="divider-vertical"></li>
+						<li class="toplevel"><a href="#PlantUML" title="PlantUML">PlantUML</a></li>
 						<li class="divider-vertical"></li>
 						<li class="dropdown">
 							<a href="#Vagrant" title="Vagrant" class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#">Vagrant <b class="caret"></b></a>
@@ -230,6 +233,10 @@
      :editor {&quot;alt-w&quot; [:editor.watch.watch-selection]
               &quot;alt-shift-w&quot; [:editor.watch.unwatch]
               &quot;alt-shift-s&quot; [:gitlight-status-toggle]
+              &quot;ctrl-d&quot; [:editor.delete-line]
+              &quot;ctrl-i&quot; [:editor.select-all
+                        :smart-indent-selection
+                        :editor.selection.clear]
               }
      }
  }
@@ -243,9 +250,17 @@
  <div class="section"> 
   <h3 id="Versioning">Versioning</h3> 
   <ul> 
-   <li>Change the version of of a project, if project is a parent or aggregator will change the version to all subsequent child project. <tt>sh mvn versions:set -DnewVersion=0.43-SNAPSHOT </tt></li> 
+   <li> <p>Change the version of of a project, if project is a parent or aggregator will change the version to all subsequent child project. <tt>sh mvn versions:set -DnewVersion=0.43-SNAPSHOT </tt></p></li> 
   </ul> 
  </div> 
+ <div class="section"> 
+  <h3 id="Profiles">Profiles</h3> 
+  <p>mvn help:active-profiles</p> 
+ </div> 
+</div> 
+<div class="section"> 
+ <h2 id="PlantUML">PlantUML</h2> 
+ <p><img src="images/plantuml/diagram.png" alt="Alt text" /></p> 
 </div> 
 <div class="section"> 
  <h2 id="Vagrant">Vagrant</h2> 
@@ -316,7 +331,7 @@
 			<div class="span12">
 				<p class="pull-right"><a href="#">Back to top</a></p>
 				<p class="copyright">Copyright &copy;2014 <a href="https://github.com/gtsntzs">gtsntzs</a>. All Rights Reserved.</p>
-				<p class="version-date"><span class="projectVersion">Version: 0.45. </span><span class="publishDate">Last Published: 2014-09-10. </span></p>
+				<p class="version-date"><span class="projectVersion">Version: 0.46. </span><span class="publishDate">Last Published: 2014-09-10. </span></p>
 				<p><a href="http://github.com/andriusvelykis/reflow-maven-skin" title="Reflow Maven skin">Reflow Maven skin</a> by <a href="http://andrius.velykis.lt" target="_blank" title="Andrius Velykis">Andrius Velykis</a>.</p>
 			</div>
 		</div>
