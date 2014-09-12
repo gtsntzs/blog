@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Project Summary | Multi Module :: Archetype</title>
+		<title>Reactor Dependency Convergence | Multi Module :: Archetype</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-project-summary project-multi-module-archetype" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-dependency-convergence project-multi-module-archetype" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -108,7 +108,7 @@
 				<li class="divider">/</li>
 				<li><a href="./" title="Multi-Module Archetype :: Example">Multi-Module Archetype :: Example</a></li>
 				<li class="divider">/</li>
-				<li>Project Summary</li>
+				<li>Reactor Dependency Convergence</li>
 			</ul>
 		</div>
 		<hr class="toc-separator" />
@@ -122,10 +122,8 @@
 					</a>
 					<div class="nav-collapse collapse" id="toc-nav-collapse">
 						<ul id="toc" class="nav">
-						<li class="toplevel"><a href="#Project_Summary" title="Project Summary">Project Summary</a></li>
-						<li class="toplevel"><a href="#Project_Information" title="Project Information">Project Information</a></li>
-						<li class="toplevel"><a href="#Project_Organization" title="Project Organization">Project Organization</a></li>
-						<li class="toplevel"><a href="#Build_Information" title="Build Information">Build Information</a></li>
+						<li class="toplevel"><a href="#Reactor_Dependency_Convergence" title="Reactor Dependency Convergence">Reactor Dependency Convergence</a></li>
+						<li class="toplevel"><a href="#Dependencies_used_in_sub-projects" title="Dependencies used in sub-projects">Dependencies used in sub-projects</a></li>
 						</ul>
 					</div>
 				</div>
@@ -139,87 +137,70 @@
 			<div class="body-content">
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Project_Summary">Project Summary</h2>
+  <h2 id="Reactor_Dependency_Convergence">Reactor Dependency Convergence</h2>
  </div> 
- <a name="Project_Summary"></a> 
- <div class="section"> 
-  <h3 id="Project_Information">Project Information</h3> 
-  <a name="Project_Information"></a> 
-  <table border="0" class="bodyTable table table-striped table-hover"> 
-   <thead> 
-    <tr class="a"> 
-     <th>Field</th> 
-     <th>Value</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr class="b"> 
-     <td>Name</td> 
-     <td>Multi Module :: Archetype</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>Description</td> 
-     <td>Archetype for generating multi-module projects.</td> 
-    </tr> 
-    <tr class="b"> 
-     <td>Homepage</td> 
-     <td><a class="externalLink" href="http://gtsntzs.github.io/blog/archetypes/multi-module-archetype">http://gtsntzs.github.io/blog/archetypes/multi-module-archetype</a></td> 
-    </tr> 
-   </tbody> 
-  </table> 
- </div> 
- <div class="section"> 
-  <h3 id="Project_Organization">Project Organization</h3> 
-  <a name="Project_Organization"></a> 
-  <table border="0" class="bodyTable table table-striped table-hover"> 
-   <thead> 
-    <tr class="a"> 
-     <th>Field</th> 
-     <th>Value</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr class="b"> 
-     <td>Name</td> 
-     <td>gtsntzs</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>URL</td> 
-     <td><a class="externalLink" href="https://github.com/gtsntzs">https://github.com/gtsntzs</a></td> 
-    </tr> 
-   </tbody> 
-  </table> 
- </div> 
- <div class="section"> 
-  <h3 id="Build_Information">Build Information</h3> 
-  <a name="Build_Information"></a> 
-  <table border="0" class="bodyTable table table-striped table-hover"> 
-   <thead> 
-    <tr class="a"> 
-     <th>Field</th> 
-     <th>Value</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr class="b"> 
-     <td>GroupId</td> 
-     <td>soa.gtsntzs.archetypes</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>ArtifactId</td> 
-     <td>multi-module-archetype</td> 
-    </tr> 
-    <tr class="b"> 
-     <td>Version</td> 
-     <td>0.46</td> 
-    </tr> 
-    <tr class="a"> 
-     <td>Type</td> 
-     <td>maven-archetype</td> 
-    </tr> 
-   </tbody> 
-  </table> 
- </div> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <caption> 
+   <b>Legend:</b> 
+  </caption> 
+  <tbody> 
+   <tr class="a"> 
+    <td><i class="icon-ok"></i></td> 
+    <td>All projects share one version of the dependency.</td> 
+   </tr> 
+   <tr class="b"> 
+    <td><i class="icon-exclamation-sign"></i></td> 
+    <td>At least one project has a differing version of the dependency.</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <br /> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <thead> 
+   <tr class="b"> 
+    <th>Ready for Release (100% Convergence and no SNAPSHOTS):</th> 
+    <td><i class="icon-exclamation-sign"></i>&nbsp;<b>Error</b><br />You do not have 100% convergence.</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Convergence (NOD/NOA):</th> 
+    <td><i class="icon-exclamation-sign"></i>&nbsp;<b>0%</b></td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Number of SNAPSHOT artifacts (NOS):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Number of unique artifacts (NOA):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Number of dependencies (NOD):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Number of sub-projects:</th> 
+    <td>5</td> 
+   </tr> 
+  </thead> 
+  <caption> 
+   <b>Statistics:</b> 
+  </caption> 
+  <tbody> 
+  </tbody> 
+ </table> 
+</div> 
+<div class="section"> 
+ <h3 id="Dependencies_used_in_sub-projects">Dependencies used in sub-projects</h3> 
 </div>
 			</div>
 		</div>
@@ -254,8 +235,8 @@
 						<li >
 							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
 							<ul class="nav nav-list">
-						<li class="active">
-							<a href="#" title="Project Summary">Project Summary</a>
+						<li >
+							<a href="project-summary.html" title="Project Summary">Project Summary</a>
 						</li>
 						<li >
 							<a href="license.html" title="Project License">Project License</a>
@@ -272,8 +253,8 @@
 						<li >
 							<a href="dependencies.html" title="Dependencies">Dependencies</a>
 						</li>
-						<li >
-							<a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a>
+						<li class="active">
+							<a href="#" title="Dependency Convergence">Dependency Convergence</a>
 						</li>
 						<li >
 							<a href="plugins.html" title="Project Plugins">Project Plugins</a>
