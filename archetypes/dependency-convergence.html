@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Examples | Archetypes :: Parent</title>
+		<title>Reactor Dependency Convergence | Archetypes :: Parent</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -48,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-index project-archetypes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-dependency-convergence project-archetypes" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -63,10 +63,10 @@
 						<ul class="nav pull-right">
 							<li ><a href="https://github.com/gtsntzs/blog/master.zip" title="Download" class="externalLink">Download</a></li>
 							<li ><a href="https://github.com/gtsntzs/blog" title="GitHub project" class="externalLink">GitHub project</a></li>
-							<li class="dropdown active">
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="active"><a href="" title="Archetypes::Parent">Archetypes::Parent</a></li>
+									<li ><a href="index.html" title="Archetypes::Parent">Archetypes::Parent</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -106,8 +106,26 @@
 				<li class="divider">/</li>
 				<li><a href="./" title="Archetypes :: Parent">Archetypes :: Parent</a></li>
 				<li class="divider">/</li>
-				<li>Examples</li>
+				<li>Reactor Dependency Convergence</li>
 			</ul>
+		</div>
+		<hr class="toc-separator" />
+		<div id="toc-bar" class="navbar" data-spy="affix" data-offset-top="250">
+			<div class="navbar-inner">
+				<div id="toc-scroll-target" class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target="#toc-nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<div class="nav-collapse collapse" id="toc-nav-collapse">
+						<ul id="toc" class="nav">
+						<li class="toplevel"><a href="#Reactor_Dependency_Convergence" title="Reactor Dependency Convergence">Reactor Dependency Convergence</a></li>
+						<li class="toplevel"><a href="#Dependencies_used_in_sub-projects" title="Dependencies used in sub-projects">Dependencies used in sub-projects</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -115,17 +133,72 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-<hr /> 
-<p>The examples contained by the Archetypes :: Parent.</p> 
-<hr /> 
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Examples">Examples</h2>
+  <h2 id="Reactor_Dependency_Convergence">Reactor Dependency Convergence</h2>
  </div> 
- <ul> 
-  <li><a href="simple-archetype/index.html">simple-archetype</a></li> 
-  <li>more to come</li> 
- </ul> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <caption> 
+   <b>Legend:</b> 
+  </caption> 
+  <tbody> 
+   <tr class="a"> 
+    <td><i class="icon-ok"></i></td> 
+    <td>All projects share one version of the dependency.</td> 
+   </tr> 
+   <tr class="b"> 
+    <td><i class="icon-exclamation-sign"></i></td> 
+    <td>At least one project has a differing version of the dependency.</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <br /> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <thead> 
+   <tr class="b"> 
+    <th>Ready for Release (100% Convergence and no SNAPSHOTS):</th> 
+    <td><i class="icon-exclamation-sign"></i>&nbsp;<b>Error</b><br />You do not have 100% convergence.</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Convergence (NOD/NOA):</th> 
+    <td><i class="icon-exclamation-sign"></i>&nbsp;<b>0%</b></td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Number of SNAPSHOT artifacts (NOS):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Number of unique artifacts (NOA):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="b"> 
+    <th>Number of dependencies (NOD):</th> 
+    <td>0</td> 
+   </tr> 
+  </thead> 
+  <thead> 
+   <tr class="a"> 
+    <th>Number of sub-projects:</th> 
+    <td>5</td> 
+   </tr> 
+  </thead> 
+  <caption> 
+   <b>Statistics:</b> 
+  </caption> 
+  <tbody> 
+  </tbody> 
+ </table> 
+</div> 
+<div class="section"> 
+ <h3 id="Dependencies_used_in_sub-projects">Dependencies used in sub-projects</h3> 
 </div>
 			</div>
 		</div>
@@ -158,7 +231,36 @@
 					<ul class="nav nav-list">
 						<li class="nav-header">Maven documentation</li>
 						<li >
-							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-right"></i></a>
+							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
+							<ul class="nav nav-list">
+						<li >
+							<a href="project-summary.html" title="Project Summary">Project Summary</a>
+						</li>
+						<li >
+							<a href="modules.html" title="Project Modules">Project Modules</a>
+						</li>
+						<li >
+							<a href="license.html" title="Project License">Project License</a>
+						</li>
+						<li >
+							<a href="team-list.html" title="Project Team">Project Team</a>
+						</li>
+						<li >
+							<a href="source-repository.html" title="Source Repository">Source Repository</a>
+						</li>
+						<li >
+							<a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a>
+						</li>
+						<li >
+							<a href="dependencies.html" title="Dependencies">Dependencies</a>
+						</li>
+						<li class="active">
+							<a href="#" title="Dependency Convergence">Dependency Convergence</a>
+						</li>
+						<li >
+							<a href="plugins.html" title="Project Plugins">Project Plugins</a>
+						</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
